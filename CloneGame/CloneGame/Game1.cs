@@ -17,18 +17,18 @@ namespace CloneGame
 	public class Game1 : Microsoft.Xna.Framework.Game
 	{
 
-		private const int NODE_SIZE = 4;
 
 		private GraphicsDeviceManager graphics;
 		private SpriteBatch spriteBatch;
 		private GraphicsDevice device;
 		private Effect effect;
-		private LeafNode node;
+		private GeneratingLeafNode node;
 		private Camera camera;
 
-		private List<LeafNode> nodes;
+		//private List<GeneratingLeafNode> nodes;
+		//private IGenerator _generator;
 
-		private IGenerator _generator;
+		private Landscape landscape;
 
 		public Game1()
 		{
@@ -65,8 +65,9 @@ namespace CloneGame
 			camera = new Camera(device);
 			camera.Position = new Vector3(30,30, -40);
 			camera.Lookat = new Vector3(0, 0, 0);
-			_generator = new PerlinGenerator();
-			CreateNodes();
+			landscape = new Landscape(device);
+			landscape.GenerateLandscape();
+
 
 			// TODO: use this.Content to load your game content here
 		}
@@ -94,8 +95,7 @@ namespace CloneGame
 				Exit();
 			if (Keyboard.GetState().IsKeyDown(Keys.N))
 			{
-				_generator = new PerlinGenerator();
-				CreateNodes();
+				landscape.GenerateLandscape();
 			}
 
 
@@ -136,10 +136,7 @@ namespace CloneGame
 			{
 				pass.Apply();
 
-				foreach (var leafNode in nodes)
-				{
-					leafNode.Draw(gameTime);
-				}
+				landscape.Draw(gameTime);
 			}
 
 			// TODO: Add your drawing code here
@@ -150,27 +147,7 @@ namespace CloneGame
 
 
 
-		void CreateNodes()
-		{
-			float startX = -2 * NODE_SIZE;
-			float startZ = -2 * NODE_SIZE;
-			float startY = -2 * NODE_SIZE;
-			int cubeSize = 4;
-			nodes = new List<LeafNode>();
-
-			for (int x = 0; x < cubeSize; x++)
-			{
-				for (int y = 0; y < cubeSize; y++)
-				{
-					for (int z = 0; z < cubeSize; z++)
-					{
-						nodes.Add(new LeafNode(device, _generator, new Vector3(startX + NODE_SIZE * x, startY + NODE_SIZE * y, startZ + NODE_SIZE * z), NODE_SIZE));
-					}
-				}
-
-
-			}
-
+		
 
 
 
@@ -179,4 +156,4 @@ namespace CloneGame
 
 
 
-}
+
