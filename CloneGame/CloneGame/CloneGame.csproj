@@ -110,6 +110,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasicNode.cs" />
     <Compile Include="Camera.cs" />
     <Compile Include="IGenerator.cs" />
     <Compile Include="GeneratingLeafNode.cs" />

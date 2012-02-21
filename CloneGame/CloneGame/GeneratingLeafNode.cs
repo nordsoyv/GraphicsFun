@@ -7,18 +7,9 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace CloneGame
 {
-	class GeneratingLeafNode : INode
+	class GeneratingLeafNode : BasicNode
 	{
-
-		VertexBuffer vertexBuffer;
-
-		private int numVertices;
-		private GraphicsDevice device;
 		Random r = new Random();
-
-		private List<BoundingBox> boundingBoxes;
-		private Vector3 location;
-		private int sideSize;
 
 		public GeneratingLeafNode(GraphicsDevice device, IGenerator generator, Vector3 pos, int size)
 		{
@@ -30,12 +21,7 @@ namespace CloneGame
 
 		}
 
-		public void Draw( GameTime time)
-		{
-			if (numVertices <= 0) return;
-			device.SetVertexBuffer(vertexBuffer);
-			device.DrawPrimitives(PrimitiveType.TriangleList, 0, numVertices/3);
-		}
+		
 
 		private void BuildBuffers(IGenerator generator)
 		{
