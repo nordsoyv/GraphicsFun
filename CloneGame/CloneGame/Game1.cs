@@ -17,14 +17,15 @@ namespace CloneGame
 	public class Game1 : Microsoft.Xna.Framework.Game
 	{
 
-
+		private const int windowWidth = 500;
+		private const int windowHeight = 500;
 		private GraphicsDeviceManager graphics;
 		private SpriteBatch spriteBatch;
 		private GraphicsDevice device;
 		private Effect effect;
 		private GeneratingLeafNode node;
 		private Camera camera;
-
+		private Player player;
 		//private List<GeneratingLeafNode> nodes;
 		//private IGenerator _generator;
 
@@ -45,8 +46,8 @@ namespace CloneGame
 		protected override void Initialize()
 		{
 			// TODO: Add your initialization logic here
-			graphics.PreferredBackBufferWidth = 500;
-			graphics.PreferredBackBufferHeight = 500;
+			graphics.PreferredBackBufferWidth = windowWidth;
+			graphics.PreferredBackBufferHeight = windowHeight;
 			graphics.IsFullScreen = false;
 			graphics.ApplyChanges();
 			base.Initialize();
@@ -62,9 +63,11 @@ namespace CloneGame
 			// Create a new SpriteBatch, which can be used to draw textures.
 			spriteBatch = new SpriteBatch(device);
 			effect = Content.Load<Effect>("effects");
+			player = new Player();
+			player.Position = new Vector3(0, 0, 0);
+			player.Heading = Quaternion.Identity;
 			camera = new Camera(device);
-			camera.Position = new Vector3(30,30, -40);
-			camera.Lookat = new Vector3(0, 0, 0);
+			camera.Registerplayer(player);
 			landscape = new Landscape(device);
 			landscape.GenerateLandscape();
 
@@ -97,13 +100,13 @@ namespace CloneGame
 			{
 				landscape.GenerateLandscape();
 			}
+			player.GetInput(Keyboard.GetState());
+			player.GetInput(Mouse.GetState());
+
+			// TODO: Add your update logic here);e
 
 
-
-			// TODO: Add your update logic here
-
-
-
+			Mouse.SetPosition(windowWidth/2,windowHeight/2);
 			base.Update(gameTime);
 		}
 
