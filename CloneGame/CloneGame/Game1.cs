@@ -17,8 +17,8 @@ namespace CloneGame
 	public class Game1 : Microsoft.Xna.Framework.Game
 	{
 
-		private const int windowWidth = 500;
-		private const int windowHeight = 500;
+		private const int WindowWidth = 500;
+		private const int WindowHeight = 500;
 		private GraphicsDeviceManager graphics;
 		private SpriteBatch spriteBatch;
 		private GraphicsDevice device;
@@ -46,8 +46,8 @@ namespace CloneGame
 		protected override void Initialize()
 		{
 			// TODO: Add your initialization logic here
-			graphics.PreferredBackBufferWidth = windowWidth;
-			graphics.PreferredBackBufferHeight = windowHeight;
+			graphics.PreferredBackBufferWidth = WindowWidth;
+			graphics.PreferredBackBufferHeight = WindowHeight;
 			graphics.IsFullScreen = false;
 			graphics.ApplyChanges();
 			base.Initialize();
@@ -101,12 +101,12 @@ namespace CloneGame
 				landscape.GenerateLandscape();
 			}
 			player.GetInput(Keyboard.GetState());
-			player.GetInput(Mouse.GetState());
+			player.GetInput(Mouse.GetState().X - WindowWidth / 2, Mouse.GetState().Y - WindowHeight / 2);
 
 			// TODO: Add your update logic here);e
 
 
-			Mouse.SetPosition(windowWidth/2,windowHeight/2);
+			Mouse.SetPosition(WindowWidth/2,WindowHeight/2);
 			base.Update(gameTime);
 		}
 

@@ -20,6 +20,10 @@ namespace CloneGame
 		private Vector3 position;
 		private Quaternion heading;
 
+
+		private float yaw;
+		private float pitch;
+
 		public Vector3 Position
 		{
 			get { return position; }
@@ -60,55 +64,87 @@ namespace CloneGame
 		{
 
 
-			Vector3 movementVector = new Vector3(0);
 			if (state.IsKeyDown(Keys.W))
 			{
-				movementVector += new Vector3(0, 0, 0.1f);
+				MoveZ(0.1f);
 			}
 			if (state.IsKeyDown(Keys.S))
 			{
-				movementVector += new Vector3(0, 0, -0.1f);
+				MoveZ(-0.1f);
 			}
 
 			if (state.IsKeyDown(Keys.A))
 			{
-				movementVector += new Vector3(0.1f, 0, 0);
+				MoveX(0.1f);
 			}
 
 			if (state.IsKeyDown(Keys.D))
 			{
-				movementVector += new Vector3(-0.1f, 0, 0);
+				MoveX(-0.1f);
 			}
 			if (state.IsKeyDown(Keys.Space))
 			{
-				movementVector += new Vector3(0, 0.1f, 0);
+				MoveY(0.1f);
 			}
 			if (state.IsKeyDown(Keys.LeftAlt))
 			{
-				movementVector += new Vector3(0, -0.1f, 0);
+				MoveY(-0.1f);
 			}
 
-			movementVector = Vector3.Transform(movementVector, Matrix.CreateFromQuaternion(heading));
-
-			Position += movementVector;
 
 
 
 		}
 
-		public void GetInput(MouseState state)
+		private void MoveX(float amount)
 		{
-			int x =state.X;
-			int y = state.Y;
-			if(x != 0)
+			Position += Vector3.Transform(new Vector3(amount, 0.0f, 0.0f), Heading);
+		}
+
+
+		private void MoveY(float amount)
+		{
+			Position += new Vector3(0, amount, 0);
+		}
+
+
+		private void MoveZ(float amount)
+		{
+			Position += Vector3.Transform(new Vector3(0.0f, 0.0f, amount), Heading);
+		}
+
+		private void RotateZ(float xrmod)
+		{
+			pitch += xrmod;
+			if (pitch > MathHelper.PiOver2) pitch = MathHelper.PiOver2;
+			if (pitch < -MathHelper.PiOver2) pitch = -MathHelper.PiOver2;
+		}
+
+		private void RotateX(float zrmod)
+		{
+
+			yaw += zrmod;
+			yaw = yaw % MathHelper.TwoPi;
+		}
+
+
+		public void GetInput(int x, int y)
+		{
+			Console.Out.WriteLine("(X,Y) : (" + x + "," + y + ")");
+			Console.WriteLine("Pitch, Yaw : " + pitch + " , " + yaw);
+			if (x != 0)
 			{
-				
+				RotateX(x * -0.005f);
 			}
-			if(y != 0)
+			if (y != 0)
 			{
-				
+				RotateZ(y * -0.005f);
 			}
 
+			Heading = Quaternion.CreateFromYawPitchRoll(yaw, pitch, 0);
+			Heading.Normalize();
+
 		}
+
 	}
 }
