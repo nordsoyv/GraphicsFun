@@ -1,9 +1,0 @@
-H:\Projects\XNA\CloneGame\CloneGame\CloneGame\bin\x86\Debug\Content\effects.xnb
-H:\Projects\XNA\CloneGame\CloneGame\CloneGame\bin\x86\Debug\CloneGame.exe
-H:\Projects\XNA\CloneGame\CloneGame\CloneGame\bin\x86\Debug\CloneGame.pdb
-H:\Projects\XNA\CloneGame\CloneGame\CloneGame\obj\x86\Debug\ResolveAssemblyReference.cache
-H:\Projects\XNA\CloneGame\CloneGame\CloneGame\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-H:\Projects\XNA\CloneGame\CloneGame\CloneGame\obj\x86\Debug\CloneGame.exe
-H:\Projects\XNA\CloneGame\CloneGame\CloneGame\obj\x86\Debug\CloneGame.pdb
-H:\Projects\XNA\CloneGame\CloneGame\CloneGame\bin\x86\Debug\Content\default.xnb
-H:\Projects\XNA\CloneGame\CloneGame\CloneGame\bin\x86\Debug\LibNoise.dll
