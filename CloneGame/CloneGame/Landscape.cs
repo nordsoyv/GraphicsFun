@@ -48,7 +48,7 @@ namespace CloneGame
 
 		void CreateNodes()
 		{
-			int cubeSize = 4;
+			int cubeSize = 8;
 			
 			float startX = -(cubeSize/2)  * NODE_SIZE;
 			float startZ = -(cubeSize / 2) * NODE_SIZE;

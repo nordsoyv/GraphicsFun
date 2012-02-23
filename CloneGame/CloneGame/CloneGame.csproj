@@ -112,6 +112,7 @@
   <ItemGroup>
     <Compile Include="BasicNode.cs" />
     <Compile Include="Camera.cs" />
+    <Compile Include="FPSDisplay.cs" />
     <Compile Include="IGenerator.cs" />
     <Compile Include="GeneratingLeafNode.cs" />
     <Compile Include="INode.cs" />

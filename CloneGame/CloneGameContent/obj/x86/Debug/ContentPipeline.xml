@@ -11,13 +11,13 @@
       <Time>2012-02-17T22:59:01.2715634+01:00</Time>
     </Item>
     <Item>
-      <Source>default.spritefont</Source>
-      <Name>default</Name>
+      <Source>Console.spritefont</Source>
+      <Name>Console</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>H:\Projects\XNA\CloneGame\CloneGame\CloneGame\bin\x86\Debug\Content\default.xnb</Output>
-      <Time>2012-02-18T16:26:52.5445945+01:00</Time>
+      <Output>H:\Projects\XNA\CloneGame\CloneGame\CloneGame\bin\x86\Debug\Content\Console.xnb</Output>
+      <Time>2012-02-24T00:28:23.5430518+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

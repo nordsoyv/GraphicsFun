@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -20,7 +21,7 @@ namespace CloneGame
 		private const int WindowWidth = 500;
 		private const int WindowHeight = 500;
 		private GraphicsDeviceManager graphics;
-		private SpriteBatch spriteBatch;
+		
 		private GraphicsDevice device;
 		private Effect effect;
 		private GeneratingLeafNode node;
@@ -30,6 +31,10 @@ namespace CloneGame
 		//private IGenerator _generator;
 
 		private Landscape landscape;
+
+		private SpriteFont Font;
+
+		private FPSDisplay fpsDisplay;
 
 		public Game1()
 		{
@@ -61,7 +66,9 @@ namespace CloneGame
 		{
 			device = graphics.GraphicsDevice;
 			// Create a new SpriteBatch, which can be used to draw textures.
-			spriteBatch = new SpriteBatch(device);
+			
+			Font = Content.Load<SpriteFont>("Console");
+			fpsDisplay = new FPSDisplay(device ,Font); 
 			effect = Content.Load<Effect>("effects");
 			player = new Player();
 			player.Position = new Vector3(0, 0, 0);
@@ -118,11 +125,12 @@ namespace CloneGame
 		{
 			device.Clear(ClearOptions.Target | ClearOptions.DepthBuffer, Color.Black, 1.0f, 0);
 			//device.Clear(Color.Black);
-			RasterizerState rs = new RasterizerState();
+			//RasterizerState rs = new RasterizerState();
 			//rs.CullMode = CullMode.CullClockwiseFace;
 			//	rs.FillMode = FillMode.WireFrame;
-			device.RasterizerState = rs;
-
+			//device.RasterizerState = rs;
+			GraphicsDevice.BlendState = BlendState.Opaque;
+			GraphicsDevice.DepthStencilState = DepthStencilState.Default;
 
 			effect.CurrentTechnique = effect.Techniques["Colored"];
 			effect.Parameters["xView"].SetValue(camera.GetViewMatrix());
@@ -142,14 +150,14 @@ namespace CloneGame
 				landscape.Draw(gameTime);
 			}
 
-			// TODO: Add your drawing code here
+			//Thread.Sleep(50);
 
-
+			fpsDisplay.Draw(gameTime);
 			base.Draw(gameTime);
 		}
 
 
-
+		
 		
 
 
