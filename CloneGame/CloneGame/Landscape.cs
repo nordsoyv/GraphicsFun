@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+
 namespace CloneGame
 {
 	class Landscape
@@ -48,7 +49,7 @@ namespace CloneGame
 
 		void CreateNodes()
 		{
-			int cubeSize = 8;
+			int cubeSize = 4;
 			
 			float startX = -(cubeSize/2)  * NODE_SIZE;
 			float startZ = -(cubeSize / 2) * NODE_SIZE;
