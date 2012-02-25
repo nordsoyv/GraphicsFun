@@ -43,7 +43,7 @@ namespace CloneGame
         {
             if (hasInput)
             {
-                Rectangle drawPos = new Rectangle(posX,posY,700,30);
+                Rectangle drawPos = new Rectangle(posX,posY,background.Width,background.Height);
                 spriteBatch.Begin();
                 spriteBatch.Draw(background, drawPos, Color.White);
                 spriteBatch.End();
