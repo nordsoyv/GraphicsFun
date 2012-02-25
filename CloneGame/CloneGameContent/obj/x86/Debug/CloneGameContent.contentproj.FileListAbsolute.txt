@@ -1,1 +1,0 @@
-H:\Projects\XNA\CloneGame\CloneGame\CloneGameContent\obj\x86\Debug\ResolveAssemblyReference.cache

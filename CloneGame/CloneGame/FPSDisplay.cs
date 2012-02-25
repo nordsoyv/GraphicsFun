@@ -26,8 +26,8 @@ namespace CloneGame
 			spriteBatch.Begin();
 
 			// Draw Hello World
-			string fps = (1000.0f /gameTime.ElapsedGameTime.Milliseconds).ToString();
-			string output = "Hello World";
+			string fps = "FPS " + (1000.0f /gameTime.ElapsedGameTime.Milliseconds).ToString();
+			//string output = "Hello World";
 
 			Vector2 fontPos = new Vector2(0, 0);
 

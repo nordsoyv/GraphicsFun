@@ -18,8 +18,8 @@ namespace CloneGame
 	public class Game1 : Microsoft.Xna.Framework.Game
 	{
 
-		private const int WindowWidth = 500;
-		private const int WindowHeight = 500;
+		private const int WindowWidth = 1024;
+		private const int WindowHeight = 768;
 		private GraphicsDeviceManager graphics;
 		
 		private GraphicsDevice device;
@@ -35,6 +35,8 @@ namespace CloneGame
 		private SpriteFont Font;
 
 		private FPSDisplay fpsDisplay;
+
+        private CommandBox commandBox;
 
 		public Game1()
 		{
@@ -77,7 +79,7 @@ namespace CloneGame
 			camera.Registerplayer(player);
 			landscape = new Landscape(device);
 			landscape.GenerateLandscape();
-
+            commandBox = new CommandBox(device, Content );
 
 			// TODO: use this.Content to load your game content here
 		}
@@ -98,17 +100,8 @@ namespace CloneGame
 		/// <param name="gameTime">Provides a snapshot of timing values.</param>
 		protected override void Update(GameTime gameTime)
 		{
-			// Allows the game to exit
-			if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-				this.Exit();
-			if (Keyboard.GetState().IsKeyDown(Keys.Escape))
-				Exit();
-			if (Keyboard.GetState().IsKeyDown(Keys.N))
-			{
-				landscape.GenerateLandscape();
-			}
-			player.GetInput(Keyboard.GetState());
-			player.GetInput(Mouse.GetState().X - WindowWidth / 2, Mouse.GetState().Y - WindowHeight / 2);
+
+            ProcessInput();
 
 			// TODO: Add your update logic here);e
 
@@ -116,6 +109,22 @@ namespace CloneGame
 			Mouse.SetPosition(WindowWidth/2,WindowHeight/2);
 			base.Update(gameTime);
 		}
+
+        private void ProcessInput()
+        {
+            // Allows the game to exit
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+                this.Exit();
+            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
+                Exit();
+            if (Keyboard.GetState().IsKeyDown(Keys.N))
+            {
+                landscape.GenerateLandscape();
+            }
+            player.GetInput(Keyboard.GetState());
+            player.GetInput(Mouse.GetState().X - WindowWidth / 2, Mouse.GetState().Y - WindowHeight / 2);
+            commandBox.GetInput();
+        }
 
 		/// <summary>
 		/// This is called when the game should draw itself.
@@ -153,6 +162,7 @@ namespace CloneGame
 			//Thread.Sleep(50);
 
 			fpsDisplay.Draw(gameTime);
+            commandBox.Draw(gameTime);
 			base.Draw(gameTime);
 		}
 
