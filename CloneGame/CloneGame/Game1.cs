@@ -101,7 +101,7 @@ namespace CloneGame
 		protected override void Update(GameTime gameTime)
 		{
 
-            ProcessInput();
+            ProcessInput(gameTime);
 
 			// TODO: Add your update logic here);e
 
@@ -110,7 +110,7 @@ namespace CloneGame
 			base.Update(gameTime);
 		}
 
-        private void ProcessInput()
+        private void ProcessInput(GameTime gametime)
         {
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
@@ -123,7 +123,7 @@ namespace CloneGame
             }
             player.GetInput(Keyboard.GetState());
             player.GetInput(Mouse.GetState().X - WindowWidth / 2, Mouse.GetState().Y - WindowHeight / 2);
-            commandBox.GetInput();
+            commandBox.GetInput(gametime);
         }
 
 		/// <summary>

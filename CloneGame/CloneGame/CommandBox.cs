@@ -19,6 +19,7 @@ namespace CloneGame
 
         private int posX, posY;
 
+        private TimeSpan showTime;
         public CommandBox(GraphicsDevice device, ContentManager Content)
         {
             // TODO: Complete member initialization
@@ -28,13 +29,22 @@ namespace CloneGame
             background = content.Load<Texture2D>("commandbox");
             posX = 0;
             posY = device.Viewport.Height - 30;
+            showTime = TimeSpan.FromSeconds(0);
         }
 
-        public void GetInput()
+        public void GetInput(GameTime gametime)
         {
+
             if (Keyboard.GetState().IsKeyDown(Keys.Enter))
             {
-                hasInput = !hasInput;
+                if (gametime.TotalGameTime.Subtract(showTime) > TimeSpan.FromSeconds(0.2f))
+                {
+                    hasInput = !hasInput;
+                    showTime = gametime.TotalGameTime;
+                }
+
+
+                
             }
         }
 
