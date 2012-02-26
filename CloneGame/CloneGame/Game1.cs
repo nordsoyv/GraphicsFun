@@ -86,6 +86,7 @@ namespace CloneGame
             inputHandler = new InputHandler();
             inputHandler.RegisterEventReciver(new ExitgameEventHandler(this));
             inputHandler.RegisterEventReciver(commandBox);
+            inputHandler.RegisterEventReciver(landscape);
             inputHandler.RegisterEventReciver(player);
 
             // TODO: use this.Content to load your game content here
@@ -119,14 +120,7 @@ namespace CloneGame
 
         private void ProcessInput(GameTime gametime)
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.N))
-            {
-                landscape.GenerateLandscape();
-            }
-            //player.GetInput(Keyboard.GetState());
             player.GetInput(Mouse.GetState().X - WindowWidth / 2, Mouse.GetState().Y - WindowHeight / 2);
-            //commandBox.GetInput(gametime);
-
             inputHandler.HandleInput(gametime);
         }
 

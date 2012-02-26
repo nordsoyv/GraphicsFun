@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace CloneGame
 {
-	class Landscape
+	class Landscape : KeyboardEventReciver
 	{
 
 
@@ -169,6 +169,16 @@ namespace CloneGame
 		}
 
 
-	}
+
+        public void HandleEvent(List<KeyboardEvent> events)
+        {
+            var nButton = events.Where(e => e.Key == Microsoft.Xna.Framework.Input.Keys.N).Select(e => e);
+            if (nButton.Count() > 0)
+            {
+                events.Remove(nButton.First());
+                this.GenerateLandscape();
+            }
+        }
+    }
 
 }
