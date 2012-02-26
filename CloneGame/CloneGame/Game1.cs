@@ -69,8 +69,7 @@ namespace CloneGame
         protected override void LoadContent()
         {
             device = graphics.GraphicsDevice;
-            // Create a new SpriteBatch, which can be used to draw textures.
-
+          
             Font = Content.Load<SpriteFont>("Console");
             fpsDisplay = new FPSDisplay(device, Font);
             effect = Content.Load<Effect>("effects");
@@ -79,7 +78,7 @@ namespace CloneGame
             player.Heading = Quaternion.Identity;
             camera = new Camera(device);
             camera.Registerplayer(player);
-            landscape = new Landscape(device);
+            landscape = new Landscape(device,effect);
             landscape.GenerateLandscape();
             commandBox = new CommandBox(device, Content);
 
@@ -89,7 +88,7 @@ namespace CloneGame
             inputHandler.RegisterEventReciver(landscape);
             inputHandler.RegisterEventReciver(player);
 
-            // TODO: use this.Content to load your game content here
+           
         }
 
         /// <summary>
@@ -110,10 +109,6 @@ namespace CloneGame
         {
 
             ProcessInput(gameTime);
-
-            // TODO: Add your update logic here);e
-
-
             Mouse.SetPosition(WindowWidth / 2, WindowHeight / 2);
             base.Update(gameTime);
         }
@@ -131,33 +126,8 @@ namespace CloneGame
         protected override void Draw(GameTime gameTime)
         {
             device.Clear(ClearOptions.Target | ClearOptions.DepthBuffer, Color.Black, 1.0f, 0);
-            //device.Clear(Color.Black);
-            //RasterizerState rs = new RasterizerState();
-            //rs.CullMode = CullMode.CullClockwiseFace;
-            //	rs.FillMode = FillMode.WireFrame;
-            //device.RasterizerState = rs;
-            GraphicsDevice.BlendState = BlendState.Opaque;
-            GraphicsDevice.DepthStencilState = DepthStencilState.Default;
 
-            effect.CurrentTechnique = effect.Techniques["Colored"];
-            effect.Parameters["xView"].SetValue(camera.GetViewMatrix());
-            effect.Parameters["xProjection"].SetValue(camera.GetProjectionMatrix());
-            effect.Parameters["xWorld"].SetValue(Matrix.Identity);
-            Vector3 lightDirection = new Vector3(-1.0f, -2.0f, 4.0f);
-            lightDirection.Normalize();
-            effect.Parameters["xLightDirection"].SetValue(lightDirection);
-            effect.Parameters["xAmbient"].SetValue(0.3f);
-            effect.Parameters["xEnableLighting"].SetValue(true);
-
-
-            foreach (EffectPass pass in effect.CurrentTechnique.Passes)
-            {
-                pass.Apply();
-
-                landscape.Draw(gameTime);
-            }
-
-            //Thread.Sleep(50);
+            landscape.Draw(camera, gameTime);
 
             fpsDisplay.Draw(gameTime);
             commandBox.Draw(gameTime);

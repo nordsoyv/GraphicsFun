@@ -22,10 +22,12 @@ namespace CloneGame
 		private VertexBuffer buffer;
 
 		List<MyOwnVertexFormat> vertices = new List<MyOwnVertexFormat>();
-		public Landscape(GraphicsDevice device)
+        private Effect _effect;
+		public Landscape(GraphicsDevice device, Effect effect)
 		{
 			_device = device;
 			_generator = new PerlinGenerator();
+            _effect = effect;
 		}
 
 		public void GenerateLandscape()
@@ -37,15 +39,38 @@ namespace CloneGame
 		}
 
 
-		public void Draw(GameTime gameTime)
+		public void Draw(Camera camera, GameTime gameTime)
 		{
-			_device.SetVertexBuffer(buffer);
-			foreach (var leafNode in _nodes)
-			{
-				leafNode.Draw(gameTime);
-			}
+            _device.BlendState = BlendState.Opaque;
+            _device.DepthStencilState = DepthStencilState.Default;
 
-		}
+            _effect.CurrentTechnique = _effect.Techniques["Colored"];
+            _effect.Parameters["xView"].SetValue(camera.GetViewMatrix());
+            _effect.Parameters["xProjection"].SetValue(camera.GetProjectionMatrix());
+            _effect.Parameters["xWorld"].SetValue(Matrix.Identity);
+            Vector3 lightDirection = new Vector3(-1.0f, -2.0f, 4.0f);
+            lightDirection.Normalize();
+            _effect.Parameters["xLightDirection"].SetValue(lightDirection);
+            _effect.Parameters["xAmbient"].SetValue(0.3f);
+            _effect.Parameters["xEnableLighting"].SetValue(true);
+
+            _device.SetVertexBuffer(buffer);
+			
+            foreach (EffectPass pass in _effect.CurrentTechnique.Passes)
+            {
+                pass.Apply();
+
+                foreach (var leafNode in _nodes)
+                {
+                    leafNode.Draw(gameTime);
+                }
+            }
+
+
+
+
+
+					}
 
 		void CreateNodes()
 		{
