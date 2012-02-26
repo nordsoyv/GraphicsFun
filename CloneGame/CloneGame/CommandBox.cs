@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Content;
 
 namespace CloneGame
 {
-    class CommandBox
+    class CommandBox : KeyboardEventReciver
     {
         private bool hasInput = false;
         private GraphicsDevice device;
@@ -32,23 +32,6 @@ namespace CloneGame
             displayTime = TimeSpan.FromSeconds(0);
         }
 
-        public void GetInput(GameTime gametime)
-        {
-
-            if (Keyboard.GetState().IsKeyDown(Keys.Enter))
-            {
-                if (gametime.TotalGameTime.Subtract(displayTime) > TimeSpan.FromSeconds(0.2f))
-                {
-                    hasInput = !hasInput;
-                    displayTime = gametime.TotalGameTime;
-                }
-
-
-                
-            }
-        }
-
-
         public void Draw(GameTime gametime)
         {
             if (hasInput)
@@ -60,5 +43,24 @@ namespace CloneGame
             }
         }
 
+
+        public void HandleEvent(List<KeyboardEvent> events)
+        {
+            var enterEvent = events.Where(e => e.Key == Keys.Enter).Select(e => e);
+            
+            if (enterEvent.Count() > 0)
+            {
+                events.Remove(enterEvent.First());
+                var gametime = enterEvent.First().Time;
+                if (gametime.TotalGameTime.Subtract(displayTime) > TimeSpan.FromSeconds(0.2f))
+                {
+                    hasInput = !hasInput;
+                    displayTime = gametime.TotalGameTime;
+                }
+
+
+
+            }
+        }
     }
 }

@@ -113,10 +113,14 @@
     <Compile Include="BasicNode.cs" />
     <Compile Include="Camera.cs" />
     <Compile Include="CommandBox.cs" />
+    <Compile Include="ExitgameEventHandler.cs" />
     <Compile Include="FPSDisplay.cs" />
     <Compile Include="IGenerator.cs" />
     <Compile Include="GeneratingLeafNode.cs" />
     <Compile Include="INode.cs" />
+    <Compile Include="InputHandler.cs" />
+    <Compile Include="KeyboardEvent.cs" />
+    <Compile Include="KeyBoardReciver.cs" />
     <Compile Include="Landscape.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
