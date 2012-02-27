@@ -50,6 +50,7 @@ namespace CloneGame.Input
 				lastMouseY = state.Y;
 				lastMouseX = state.X;
 				mouseEvents.Add(mEvent);
+				
 				Console.WriteLine(lastMouseX + " " + lastMouseY + ", " + state.X + " " + state.Y + ", " + mEvent.XMovement+ ", " + mEvent.YMovement);
 			}
 
@@ -68,10 +69,13 @@ namespace CloneGame.Input
 		private void HandleKeyboardInput(GameTime gametime)
 		{
 			var keys = Keyboard.GetState().GetPressedKeys();
+			bool altPressed = Keyboard.GetState().IsKeyDown(Keys.LeftAlt) || Keyboard.GetState().IsKeyDown(Keys.RightAlt);
+			bool shiftPressed = Keyboard.GetState().IsKeyDown(Keys.LeftShift) || Keyboard.GetState().IsKeyDown(Keys.RightShift);
+			bool ctrlPressed = Keyboard.GetState().IsKeyDown(Keys.LeftControl) || Keyboard.GetState().IsKeyDown(Keys.RightControl);
 			List<KeyboardEvent> keyboardEvents = new List<KeyboardEvent>();
 			foreach (var key in keys)
 			{
-				keyboardEvents.Add(new KeyboardEvent(key, gametime));
+				keyboardEvents.Add(new KeyboardEvent(key, gametime, shiftPressed, altPressed, ctrlPressed));
 			}
 
 			foreach (var reciver in keyboardRecivers)

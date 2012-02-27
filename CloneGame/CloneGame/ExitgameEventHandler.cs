@@ -12,11 +12,11 @@ namespace CloneGame
 
         public void HandleEvent(List<KeyboardEvent> events)
         {
-            var esc = events.Where(e => e.Key == Microsoft.Xna.Framework.Input.Keys.Escape).Select(e=>e);
+            var esc = events.Where(e=>e.Handled == false).Where(e => e.Key == Microsoft.Xna.Framework.Input.Keys.Escape).Select(e=>e);
             // Allows the game to exit
             if (esc.Count() > 0)
             {
-                events.Remove(esc.First());
+            	esc.First().Handled = true;
                 game.Exit();
 
             }

@@ -7,11 +7,19 @@ namespace CloneGame.Input
     {
         public Keys Key { get; set; }
         public GameTime Time { get; set; }
+		public bool Shift { get; set; }
+		public bool Ctrl { get; set; }
+		public bool Alt { get; set; }
+		public bool Handled { get; set; }
 
-        public KeyboardEvent(Keys key, GameTime gametime)
+        public KeyboardEvent(Keys key, GameTime gametime, bool shiftPressed , bool altPressed , bool ctrPressed )
         {
             Key = key;
             Time = gametime;
+        	Shift = shiftPressed;
+        	Ctrl = ctrPressed;
+        	Alt = altPressed;
+        	Handled = false;
         }
 
     }

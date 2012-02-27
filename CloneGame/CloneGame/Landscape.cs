@@ -198,10 +198,10 @@ namespace CloneGame
 
         public void HandleEvent(List<KeyboardEvent> events)
         {
-            var nButton = events.Where(e => e.Key == Microsoft.Xna.Framework.Input.Keys.N).Select(e => e);
+            var nButton = events.Where(e=>e.Handled == false).Where(e => e.Key == Microsoft.Xna.Framework.Input.Keys.N).Select(e => e);
             if (nButton.Count() > 0)
             {
-                events.Remove(nButton.First());
+            	nButton.First().Handled = true;
                 this.GenerateLandscape();
             }
         }

@@ -90,41 +90,43 @@ namespace CloneGame
 
 		public void HandleEvent(List<KeyboardEvent> events)
 		{
-			var wButton = events.Where(e => e.Key == Keys.W).Select(e => e);
-			var sButton = events.Where(e => e.Key == Keys.S).Select(e => e);
-			var aButton = events.Where(e => e.Key == Keys.A).Select(e => e);
-			var dButton = events.Where(e => e.Key == Keys.D).Select(e => e);
-			var spaceButton = events.Where(e => e.Key == Keys.Space).Select(e => e);
-			var altButton = events.Where(e => e.Key == Keys.LeftAlt).Select(e => e);
+			var unhandledEvents = events.Where(e => e.Handled == false);
+
+			var wButton = unhandledEvents.Where(e => e.Key == Keys.W).Select(e => e);
+			var sButton = unhandledEvents.Where(e => e.Key == Keys.S).Select(e => e);
+			var aButton = unhandledEvents.Where(e => e.Key == Keys.A).Select(e => e);
+			var dButton = unhandledEvents.Where(e => e.Key == Keys.D).Select(e => e);
+			var spaceButton = unhandledEvents.Where(e => e.Key == Keys.Space).Select(e => e);
+			var altButton = unhandledEvents.Where(e => e.Key == Keys.LeftAlt).Select(e => e);
 
 			if (wButton.Count() > 0)
 			{
-				events.Remove(wButton.First());
+				wButton.First().Handled = true;
 				MoveZ(0.1f);
 			}
 			if (sButton.Count() > 0)
 			{
-				events.Remove(sButton.First());
+				sButton.First().Handled = true;
 				MoveZ(-0.1f);
 			}
 			if (aButton.Count() > 0)
 			{
-				events.Remove(aButton.First());
+				aButton.First().Handled = true;
 				MoveX(0.1f);
 			}
 			if (dButton.Count() > 0)
 			{
-				events.Remove(dButton.First());
+				dButton.First().Handled = true;
 				MoveX(-0.1f);
 			}
 			if (spaceButton.Count() > 0)
 			{
-				events.Remove(spaceButton.First());
+				spaceButton.First().Handled = true;
 				MoveY(0.1f);
 			}
 			if (altButton.Count() > 0)
 			{
-				events.Remove(altButton.First());
+				altButton.First().Handled = true;
 				MoveY(-0.1f);
 			}
 

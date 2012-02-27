@@ -21,7 +21,14 @@ namespace CloneGame
         private int posX, posY;
 
         private TimeSpan displayTime;
-        public CommandBox(GraphicsDevice device, ContentManager Content)
+
+    	private string command;
+    	private SpriteFont font;
+
+    	private const int marginX = 5;
+    	private const int marginY = 5;
+
+    	public CommandBox(GraphicsDevice device, ContentManager Content)
         {
             // TODO: Complete member initialization
             this.device = device;
@@ -31,6 +38,8 @@ namespace CloneGame
             posX = 0;
             posY = device.Viewport.Height - 30;
             displayTime = TimeSpan.FromSeconds(0);
+        	command = "";
+			font = Content.Load<SpriteFont>("Console");
         }
 
         public void Draw(GameTime gametime)
@@ -40,6 +49,7 @@ namespace CloneGame
                 Rectangle drawPos = new Rectangle(posX,posY,background.Width,background.Height);
                 spriteBatch.Begin();
                 spriteBatch.Draw(background, drawPos, Color.White);
+				spriteBatch.DrawString(font,command, new Vector2( posX+marginX,posY+marginY),Color.Black);
                 spriteBatch.End();
             }
         }
@@ -47,21 +57,50 @@ namespace CloneGame
 
         public void HandleEvent(List<KeyboardEvent> events)
         {
-            var enterEvent = events.Where(e => e.Key == Keys.Enter).Select(e => e);
+            var enterEvent = events.Where(e => e.Key == Keys.Enter).Where(e=>e.Handled == false).Select(e => e);
             
             if (enterEvent.Count() > 0)
             {
-                events.Remove(enterEvent.First());
+                
                 var gametime = enterEvent.First().Time;
                 if (gametime.TotalGameTime.Subtract(displayTime) > TimeSpan.FromSeconds(0.2f))
                 {
-                    hasInput = !hasInput;
+					if(hasInput)
+					{
+						hasInput = false;
+						command = "";
+					}else
+					{
+						hasInput = true;
+					}
+
+                    
                     displayTime = gametime.TotalGameTime;
                 }
-
-
-
+            	enterEvent.First().Handled = true;
             }
+            else
+            {
+            	if (hasInput)
+            	{
+            		foreach (var keyboardEvent in events.Where(e=>e.Handled == false))
+            		{
+						if (keyboardEvent.Key.ToString().Length ==1 &&   keyboardEvent.Key.ToString().CompareTo("A") >= 0 && keyboardEvent.Key.ToString().CompareTo("Z") <= 0)
+						{
+							string letter = keyboardEvent.Key.ToString().ToLower();
+							if(keyboardEvent.Shift)
+							{
+								letter = letter.ToUpper();
+							}
+							command += letter;
+							keyboardEvent.Handled = true;
+						}
+            		}
+					
+					
+            	}
+            }
+			
         }
     }
 }
