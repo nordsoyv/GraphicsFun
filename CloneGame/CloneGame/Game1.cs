@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using CloneGame.Input;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -83,10 +84,11 @@ namespace CloneGame
             commandBox = new CommandBox(device, Content);
 
             inputHandler = new InputHandler();
-            inputHandler.RegisterEventReciver(new ExitgameEventHandler(this));
-            inputHandler.RegisterEventReciver(commandBox);
-            inputHandler.RegisterEventReciver(landscape);
-            inputHandler.RegisterEventReciver(player);
+            inputHandler.RegisterKeyboardEventReciver(new ExitgameEventHandler(this));
+            inputHandler.RegisterKeyboardEventReciver(commandBox);
+            inputHandler.RegisterKeyboardEventReciver(landscape);
+			inputHandler.RegisterKeyboardEventReciver(player);
+			inputHandler.RegisterMouseEventReciver(player);
 
            
         }
@@ -109,13 +111,13 @@ namespace CloneGame
         {
 
             ProcessInput(gameTime);
-            Mouse.SetPosition(WindowWidth / 2, WindowHeight / 2);
+            //Mouse.SetPosition(WindowWidth / 2, WindowHeight / 2);
             base.Update(gameTime);
         }
 
         private void ProcessInput(GameTime gametime)
         {
-            player.GetInput(Mouse.GetState().X - WindowWidth / 2, Mouse.GetState().Y - WindowHeight / 2);
+            //player.GetInput(Mouse.GetState().X - WindowWidth / 2, Mouse.GetState().Y - WindowHeight / 2);
             inputHandler.HandleInput(gametime);
         }
 

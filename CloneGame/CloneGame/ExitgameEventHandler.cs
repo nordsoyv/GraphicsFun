@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using CloneGame.Input;
 
 namespace CloneGame
 {
-    class ExitgameEventHandler : KeyboardEventReciver
+    class ExitgameEventHandler : IKeyboardEventReciver
     {
         private Game1 game;
 
