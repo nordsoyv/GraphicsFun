@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 
 namespace CloneGame.Input
 {
@@ -11,11 +11,14 @@ namespace CloneGame.Input
 		private List<IKeyboardEventReciver> keyboardRecivers;
 		private List<IMouseEventReciver> mouseRecivers;
 
+		private KeyboardState oldState;
+
 		private int lastMouseX, lastMouseY;
 		public InputHandler()
 		{
 			keyboardRecivers = new List<IKeyboardEventReciver>();
 			mouseRecivers = new List<IMouseEventReciver>();
+			oldState = Keyboard.GetState();
 			lastMouseY = lastMouseX = 0;
 		}
 
@@ -68,19 +71,32 @@ namespace CloneGame.Input
 
 		private void HandleKeyboardInput(GameTime gametime)
 		{
-			var keys = Keyboard.GetState().GetPressedKeys();
+			var newState = Keyboard.GetState();
+			var keys = newState.GetPressedKeys();
 			bool altPressed = Keyboard.GetState().IsKeyDown(Keys.LeftAlt) || Keyboard.GetState().IsKeyDown(Keys.RightAlt);
 			bool shiftPressed = Keyboard.GetState().IsKeyDown(Keys.LeftShift) || Keyboard.GetState().IsKeyDown(Keys.RightShift);
 			bool ctrlPressed = Keyboard.GetState().IsKeyDown(Keys.LeftControl) || Keyboard.GetState().IsKeyDown(Keys.RightControl);
-			List<KeyboardEvent> keyboardEvents = new List<KeyboardEvent>();
+			var keyboardEvents = new List<KeyboardEvent>();
 			foreach (var key in keys)
 			{
-				keyboardEvents.Add(new KeyboardEvent(key, gametime, shiftPressed, altPressed, ctrlPressed));
+				if(oldState.IsKeyDown(key)  ) // pressed before , this is a holding event
+				{
+					keyboardEvents.Add(new KeyboardEvent(key, gametime,KeyboardEvent.KeyboardEventType.Held, shiftPressed, altPressed, ctrlPressed));	
+				}else // New push
+				{
+					keyboardEvents.Add(new KeyboardEvent(key, gametime,KeyboardEvent.KeyboardEventType.Pressed, shiftPressed, altPressed, ctrlPressed));	
+				}
+				
 			}
 
+			
+			oldState = newState;
+			
 			foreach (var reciver in keyboardRecivers)
 			{
 				reciver.HandleEvent(keyboardEvents);
+				
+				//keyboardEvents.RemoveAll(e => e.Handled == true);
 			}
 		}
 	}
