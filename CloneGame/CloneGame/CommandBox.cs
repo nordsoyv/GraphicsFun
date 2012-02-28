@@ -13,7 +13,6 @@ namespace CloneGame
 	class CommandBox : ICharEventReciver
 	{
 		private bool hasInput = false;
-		private GraphicsDevice device;
 		private ContentManager content;
 		private Texture2D background;
 		private SpriteBatch spriteBatch;
@@ -29,7 +28,6 @@ namespace CloneGame
 		public CommandBox(GraphicsDevice device, ContentManager Content)
 		{
 			// TODO: Complete member initialization
-			this.device = device;
 			this.content = Content;
 			spriteBatch = new SpriteBatch(device);
 			background = content.Load<Texture2D>("commandbox");
@@ -59,7 +57,7 @@ namespace CloneGame
 			}
 		}
 
-		public void HandleEvent(List<CharButtonEvent> events)
+		public void HandleEvent(IEnumerable<CharButtonEvent> events)
 		{
 			var enterEvent = events.Where(e => e.Key.Equals('\r')).Where(e => e.Handled == false).Select(e => e);
 			var backSpace = events.Where(e => e.Key.Equals('\b')).Where(e => e.Handled == false).Select(e => e);
@@ -88,7 +86,7 @@ namespace CloneGame
 			{
 				foreach (var charButtonEvent in events)
 				{
-					if (command.Length < MaxLength)
+					if (command.Length < MaxLength && hasInput)
 					{
 						command += charButtonEvent.Key;
 					}

@@ -4,7 +4,7 @@ namespace CloneGame.Input
 {
     interface IEventReciver<T>
     {
-        void HandleEvent(List<T> events);
+        void HandleEvent(IEnumerable<T> events);
 
     }
 

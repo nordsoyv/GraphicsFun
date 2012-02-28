@@ -196,7 +196,7 @@ namespace CloneGame
 
 
 
-        public void HandleEvent(List<KeybuttonEvent> events)
+        public void HandleEvent(IEnumerable<KeybuttonEvent> events)
         {
             var nButton = events.Where(e=>e.Handled == false).Where(e => e.Key == Microsoft.Xna.Framework.Input.Keys.N).Select(e => e);
             if (nButton.Count() > 0)

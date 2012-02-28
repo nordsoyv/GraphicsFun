@@ -60,7 +60,7 @@ namespace CloneGame
 				Changed(this, e);
 		}
 
-		public void HandleEvent(List<MouseEvent> events)
+		public void HandleEvent(IEnumerable<MouseEvent> events)
 		{
 			var movement = events.Where(e => e.EventType == MouseEvent.MouseEventType.Movement).Select(e => e);
 			if (movement.Count() > 0)
@@ -78,7 +78,7 @@ namespace CloneGame
 
 				Heading = Quaternion.CreateFromYawPitchRoll(yaw, pitch, 0);
 				Heading.Normalize();
-				events.Remove(movement.First());
+				
 
 			}
 
@@ -88,7 +88,7 @@ namespace CloneGame
 		}
 
 
-		public void HandleEvent(List<KeybuttonEvent> events)
+		public void HandleEvent(IEnumerable<KeybuttonEvent> events)
 		{
 			var unhandledEvents = events.Where(e => e.Handled == false).Select(e =>e);
 
