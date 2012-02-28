@@ -40,7 +40,7 @@ namespace CloneGame
 
 		public void Registerplayer(Player p)
 		{
-			p.Changed += new PlayerInfoChangedHandler(PlayerChanged);
+			p.Changed += PlayerChanged;
 		}
 
 		private void PlayerChanged(object sender, PlayerInfoChangedHandlerEventArgs playerInfoChangedHandlerEventArgs)

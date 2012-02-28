@@ -3,35 +3,53 @@ using Microsoft.Xna.Framework.Input;
 
 namespace CloneGame.Input
 {
-    class KeyboardEvent
+    class KeybuttonEvent
     {
-    	public enum KeyboardEventType
+    	public enum KeybuttonEventType
     	{
 			Pressed,
 			Released,
 			Held
     	}
-        
+
 		public Keys Key { get; set; }
         public GameTime Time { get; set; }
 		public bool Shift { get; set; }
 		public bool Ctrl { get; set; }
 		public bool Alt { get; set; }
 		public bool Handled { get; set; }
-    	public KeyboardEventType EventType { get; set; }
+    	public KeybuttonEventType EventType { get; set; }
 
-        public KeyboardEvent(Keys key, GameTime gametime, KeyboardEventType type ,  bool shiftPressed , bool altPressed , bool ctrPressed )
+        public KeybuttonEvent(Keys key,GameTime gameTime, KeybuttonEventType type, bool shiftPressed, bool altPressed, bool ctrlPressed)
         {
             Key = key;
-            Time = gametime;
+            Time = gameTime;
         	Shift = shiftPressed;
-        	Ctrl = ctrPressed;
+        	Ctrl = ctrlPressed;
         	Alt = altPressed;
         	Handled = false;
         	EventType = type;
         }
 
     }
+
+	class CharButtonEvent
+	{
+
+		public char Key { get; set; }
+		public GameTime Time { get; set; }
+		public bool Alt { get; set; }
+		public bool Handled { get; set; }
+
+		public CharButtonEvent(CharacterEventArgs args)
+		{
+			Key = args.Character;
+			Alt = args.AltPressed;
+		}
+
+	}
+
+
 
     class MouseEvent
     {

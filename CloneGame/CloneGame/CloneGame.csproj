@@ -120,7 +120,7 @@
     <Compile Include="INode.cs" />
     <Compile Include="Input\InputHandler.cs" />
     <Compile Include="Input\InputSystem.cs" />
-    <Compile Include="Input\KeyboardEvent.cs" />
+    <Compile Include="Input\KeybuttonEvent.cs" />
     <Compile Include="Input\KeyBoardReciver.cs" />
     <Compile Include="Landscape.cs" />
     <Compile Include="Player.cs" />

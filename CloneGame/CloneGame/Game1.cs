@@ -82,9 +82,9 @@ namespace CloneGame
             landscape.GenerateLandscape();
             commandBox = new CommandBox(device, Content);
 
-            inputHandler = new InputHandler();
+            inputHandler = new InputHandler(this.Window);
             inputHandler.RegisterKeyboardEventReciver(new ExitgameEventHandler(this));
-            inputHandler.RegisterKeyboardEventReciver(commandBox);
+            inputHandler.RegisterCharEventReciver(commandBox);
             inputHandler.RegisterKeyboardEventReciver(landscape);
 			inputHandler.RegisterKeyboardEventReciver(player);
 			inputHandler.RegisterMouseEventReciver(player);

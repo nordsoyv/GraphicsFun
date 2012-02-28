@@ -88,45 +88,45 @@ namespace CloneGame
 		}
 
 
-		public void HandleEvent(List<KeyboardEvent> events)
+		public void HandleEvent(List<KeybuttonEvent> events)
 		{
-			var unhandledEvents = events.Where(e => e.Handled == false);
+			var unhandledEvents = events.Where(e => e.Handled == false).Select(e =>e);
 
-			var wButton = unhandledEvents.Where(e => e.Key == Keys.W).Select(e => e);
-			var sButton = unhandledEvents.Where(e => e.Key == Keys.S).Select(e => e);
-			var aButton = unhandledEvents.Where(e => e.Key == Keys.A).Select(e => e);
-			var dButton = unhandledEvents.Where(e => e.Key == Keys.D).Select(e => e);
-			var spaceButton = unhandledEvents.Where(e => e.Key == Keys.Space).Select(e => e);
-			var altButton = unhandledEvents.Where(e => e.Key == Keys.LeftAlt).Select(e => e);
+			var wButton = unhandledEvents.Where(e => e.Key == Keys.W).Select(e => e).FirstOrDefault();
+			var sButton = unhandledEvents.Where(e => e.Key == Keys.S).Select(e => e).FirstOrDefault();
+			var aButton = unhandledEvents.Where(e => e.Key == Keys.A).Select(e => e).FirstOrDefault();
+			var dButton = unhandledEvents.Where(e => e.Key == Keys.D).Select(e => e).FirstOrDefault();
+			var spaceButton = unhandledEvents.Where(e => e.Key == Keys.Space).Select(e => e).FirstOrDefault();
+			var altButton = unhandledEvents.Where(e => e.Key == Keys.LeftAlt).Select(e => e).FirstOrDefault();
 
-			if (wButton.Count() > 0)
+			if (wButton != null)
 			{
-				wButton.First().Handled = true;
+				wButton.Handled = true;
 				MoveZ(0.1f);
 			}
-			if (sButton.Count() > 0)
+			if (sButton != null)
 			{
-				sButton.First().Handled = true;
+				sButton.Handled = true;
 				MoveZ(-0.1f);
 			}
-			if (aButton.Count() > 0)
+			if (aButton != null)
 			{
-				aButton.First().Handled = true;
+				aButton.Handled = true;
 				MoveX(0.1f);
 			}
-			if (dButton.Count() > 0)
+			if (dButton != null)
 			{
-				dButton.First().Handled = true;
+				dButton.Handled = true;
 				MoveX(-0.1f);
 			}
-			if (spaceButton.Count() > 0)
+			if (spaceButton != null)
 			{
-				spaceButton.First().Handled = true;
+				spaceButton.Handled = true;
 				MoveY(0.1f);
 			}
-			if (altButton.Count() > 0)
+			if (altButton != null)
 			{
-				altButton.First().Handled = true;
+				altButton.Handled = true;
 				MoveY(-0.1f);
 			}
 

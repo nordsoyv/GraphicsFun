@@ -8,7 +8,7 @@ namespace CloneGame.Input
 
     }
 
-    interface IKeyboardEventReciver : IEventReciver<KeyboardEvent>
+    interface IKeyboardEventReciver : IEventReciver<KeybuttonEvent>
     {
 
     }
@@ -18,5 +18,8 @@ namespace CloneGame.Input
 
 	}
 
-
+	internal interface ICharEventReciver : IEventReciver<CharButtonEvent>
+	{
+		
+	}
 }

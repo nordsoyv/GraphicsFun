@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Content;
 
 namespace CloneGame
 {
-	class CommandBox : IKeyboardEventReciver
+	class CommandBox : ICharEventReciver
 	{
 		private bool hasInput = false;
 		private GraphicsDevice device;
@@ -19,20 +19,12 @@ namespace CloneGame
 		private SpriteBatch spriteBatch;
 
 		private int posX, posY;
-
-		private TimeSpan displayTime;
-
 		private string command;
 		private SpriteFont font;
 
 		private const int marginX = 5;
 		private const int marginY = 5;
-
-		private Keys[] legalKeys = {
-    	                           	Keys.A, Keys.B, Keys.C, Keys.D, Keys.E, Keys.F, Keys.G, Keys.H, Keys.I, Keys.J, Keys.K,
-    	                           	Keys.L, Keys.M,Keys.N,Keys.O,Keys.P,Keys.Q, Keys.R, Keys.S,Keys.T,Keys.U,Keys.V,Keys.W,Keys.X,Keys.Y,Keys.Z,Keys.Space
-
-    };
+		private const int MaxLength = 128;
 
 		public CommandBox(GraphicsDevice device, ContentManager Content)
 		{
@@ -43,7 +35,6 @@ namespace CloneGame
 			background = content.Load<Texture2D>("commandbox");
 			posX = 0;
 			posY = device.Viewport.Height - 30;
-			displayTime = TimeSpan.FromSeconds(0);
 			command = "";
 			font = Content.Load<SpriteFont>("Console");
 		}
@@ -53,65 +44,56 @@ namespace CloneGame
 			if (hasInput)
 			{
 				Rectangle drawPos = new Rectangle(posX, posY, background.Width, background.Height);
+				Vector2 pos = new Vector2(posX + marginX, posY + marginY);
+				string tmpCommand = command;
 				spriteBatch.Begin();
 				spriteBatch.Draw(background, drawPos, Color.White);
-				spriteBatch.DrawString(font, command, new Vector2(posX + marginX, posY + marginY), Color.Black);
+				while (font.MeasureString(tmpCommand).X >= background.Width - (marginX *2))
+				{
+					tmpCommand = tmpCommand.Substring(1);
+				}
+
+				spriteBatch.DrawString(font, tmpCommand, pos, Color.Gray);	
+				
 				spriteBatch.End();
 			}
 		}
 
-
-		public void HandleEvent(List<KeyboardEvent> events)
+		public void HandleEvent(List<CharButtonEvent> events)
 		{
-			var enterEvent = events.Where(e => e.Key == Keys.Enter).Where(e => e.Handled == false).Select(e => e);
-
+			var enterEvent = events.Where(e => e.Key.Equals('\r')).Where(e => e.Handled == false).Select(e => e);
+			var backSpace = events.Where(e => e.Key.Equals('\b')).Where(e => e.Handled == false).Select(e => e);
 			if (enterEvent.Count() > 0)
 			{
 
-				var gametime = enterEvent.First().Time;
-				if (gametime.TotalGameTime.Subtract(displayTime) > TimeSpan.FromSeconds(0.2f))
+				if (hasInput)
 				{
-					if (hasInput)
-					{
-						hasInput = false;
-						command = "";
-					}
-					else
-					{
-						hasInput = true;
-					}
-
-
-					displayTime = gametime.TotalGameTime;
+					hasInput = false;
+					command = "";
+				}
+				else
+				{
+					hasInput = true;
 				}
 				enterEvent.First().Handled = true;
 			}
-			else
+			else if (backSpace.Count() > 0)
 			{
-				if (hasInput)
+				if (command.Length > 0)
 				{
-					foreach (var keyboardEvent in events.Where(e => e.Handled == false).Where(e => e.EventType == KeyboardEvent.KeyboardEventType.Pressed))
-					{
-						if(legalKeys.Contains(keyboardEvent.Key))
-						{
-							string letter = keyboardEvent.Key.ToString().ToLower();
-							if (keyboardEvent.Shift)
-							{
-								letter = letter.ToUpper();
-							}
-							command += letter;
-							keyboardEvent.Handled = true;
-						}
-
-						if (keyboardEvent.Key.ToString().Length == 1 && keyboardEvent.Key.ToString().CompareTo("A") >= 0 && keyboardEvent.Key.ToString().CompareTo("Z") <= 0)
-						{
-						}
-					}
-
-
+					command = command.Substring(0, command.Length - 1);
 				}
 			}
-
+			else
+			{
+				foreach (var charButtonEvent in events)
+				{
+					if (command.Length < MaxLength)
+					{
+						command += charButtonEvent.Key;
+					}
+				}
+			}
 		}
 	}
 }
