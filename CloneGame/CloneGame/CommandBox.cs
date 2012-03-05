@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Content;
 
 namespace CloneGame
 {
-	class CommandBox : ICharEventReciver
+	class CommandBox : IKeyboardEventReciver
 	{
 		private bool hasInput = false;
 		private ContentManager content;
@@ -57,10 +57,13 @@ namespace CloneGame
 			}
 		}
 
-		public void HandleEvent(IEnumerable<CharButtonEvent> events)
+		public void HandleEvent(IEnumerable<KeyboardEvent> events)
 		{
-			var enterEvent = events.Where(e => e.Key.Equals('\r')).Where(e => e.Handled == false).Select(e => e);
-			var backSpace = events.Where(e => e.Key.Equals('\b')).Where(e => e.Handled == false).Select(e => e);
+			IEnumerable<CharButtonEvent> charevents = events.OfType<CharButtonEvent>().Select(e => e);
+
+
+			var enterEvent = charevents.Where(e => e.Key.Equals('\r')).Where(e => e.Handled == false).Select(e => e);
+			var backSpace = charevents.Where(e => e.Key.Equals('\b')).Where(e => e.Handled == false).Select(e => e);
 			if (enterEvent.Count() > 0)
 			{
 
@@ -84,12 +87,20 @@ namespace CloneGame
 			}
 			else
 			{
-				foreach (var charButtonEvent in events)
+				foreach (var charButtonEvent in charevents)
 				{
 					if (command.Length < MaxLength && hasInput)
 					{
 						command += charButtonEvent.Key;
 					}
+				}
+			}
+			if (hasInput)
+			{
+				//commandbox eats all keyboardevents if active
+				foreach (var keybuttonEvent in events)
+				{
+					keybuttonEvent.Handled = true;
 				}
 			}
 		}

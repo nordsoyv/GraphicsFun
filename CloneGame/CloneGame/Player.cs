@@ -88,16 +88,16 @@ namespace CloneGame
 		}
 
 
-		public void HandleEvent(IEnumerable<KeybuttonEvent> events)
+		public void HandleEvent(IEnumerable<KeyboardEvent> events)
 		{
-			var unhandledEvents = events.Where(e => e.Handled == false).Select(e =>e);
+			IEnumerable<KeybuttonEvent> keybuttonEvents = events.OfType<KeybuttonEvent>();
 
-			var wButton = unhandledEvents.Where(e => e.Key == Keys.W).Select(e => e).FirstOrDefault();
-			var sButton = unhandledEvents.Where(e => e.Key == Keys.S).Select(e => e).FirstOrDefault();
-			var aButton = unhandledEvents.Where(e => e.Key == Keys.A).Select(e => e).FirstOrDefault();
-			var dButton = unhandledEvents.Where(e => e.Key == Keys.D).Select(e => e).FirstOrDefault();
-			var spaceButton = unhandledEvents.Where(e => e.Key == Keys.Space).Select(e => e).FirstOrDefault();
-			var altButton = unhandledEvents.Where(e => e.Key == Keys.LeftAlt).Select(e => e).FirstOrDefault();
+			var wButton = keybuttonEvents.Where(e => e.Key == Keys.W).Select(e => e).FirstOrDefault();
+			var sButton = keybuttonEvents.Where(e => e.Key == Keys.S).Select(e => e).FirstOrDefault();
+			var aButton = keybuttonEvents.Where(e => e.Key == Keys.A).Select(e => e).FirstOrDefault();
+			var dButton = keybuttonEvents.Where(e => e.Key == Keys.D).Select(e => e).FirstOrDefault();
+			var spaceButton = keybuttonEvents.Where(e => e.Key == Keys.Space).Select(e => e).FirstOrDefault();
+			var altButton = keybuttonEvents.Where(e => e.Key == Keys.LeftAlt).Select(e => e).FirstOrDefault();
 
 			if (wButton != null)
 			{

@@ -10,16 +10,22 @@ namespace CloneGame
     {
         private Game1 game;
 
-        public void HandleEvent(IEnumerable<KeybuttonEvent> events)
+		public void HandleEvent(IEnumerable<KeyboardEvent> events)
         {
-            var esc = events.Where(e=>e.Handled == false).Where(e => e.Key == Microsoft.Xna.Framework.Input.Keys.Escape).Select(e=>e);
-            // Allows the game to exit
-            if (esc.Count() > 0)
-            {
-            	esc.First().Handled = true;
-                game.Exit();
 
-            }
+			foreach (var keyboardEvent in events)
+			{
+				if (typeof(KeybuttonEvent) == keyboardEvent.GetType())
+				{
+					KeybuttonEvent e = (KeybuttonEvent) keyboardEvent;
+					if(e.Key == Microsoft.Xna.Framework.Input.Keys.Escape)
+					{
+						e.Handled = true;
+						game.Exit();
+					}
+				}
+			}
+
         }
 
         public ExitgameEventHandler( Game1 game)

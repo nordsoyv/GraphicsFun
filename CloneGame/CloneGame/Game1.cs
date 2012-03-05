@@ -84,7 +84,7 @@ namespace CloneGame
 
             inputHandler = new InputHandler(this.Window);
             inputHandler.RegisterKeyboardEventReciver(new ExitgameEventHandler(this));
-            inputHandler.RegisterCharEventReciver(commandBox);
+			inputHandler.RegisterKeyboardEventReciver(commandBox);
             inputHandler.RegisterKeyboardEventReciver(landscape);
 			inputHandler.RegisterKeyboardEventReciver(player);
 			inputHandler.RegisterMouseEventReciver(player);

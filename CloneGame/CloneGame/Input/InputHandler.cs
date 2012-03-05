@@ -11,7 +11,7 @@ namespace CloneGame.Input
 
 		private List<IKeyboardEventReciver> keyboardRecivers;
 		private List<IMouseEventReciver> mouseRecivers;
-		private List<ICharEventReciver> charRecivers;
+//		private List<KeyboardEvent> charRecivers;
 
 		private KeyboardState oldState;
 
@@ -25,7 +25,7 @@ namespace CloneGame.Input
 		{
 			keyboardRecivers = new List<IKeyboardEventReciver>();
 			mouseRecivers = new List<IMouseEventReciver>();
-			charRecivers = new List<ICharEventReciver>();
+			//charRecivers = new List<ICharEventReciver>();
 
 			oldState = Keyboard.GetState();
 			lastMouseY = lastMouseX = 0;
@@ -76,10 +76,11 @@ namespace CloneGame.Input
 
 
 
-		public void RegisterCharEventReciver(ICharEventReciver r)
+/*		public void RegisterCharEventReciver(ICharEventReciver r)
 		{
 			charRecivers.Add(r);
 		}
+		*/
 
 		public void RegisterMouseEventReciver(IMouseEventReciver r)
 		{
@@ -125,12 +126,14 @@ namespace CloneGame.Input
 
 		private void HandleKeyboardInput(GameTime gametime)
 		{
-			HandleKeyboardCharEvents(gametime);
-			HandleKeyboardPollingEvents(gametime);
-		}
+			if (charEvents.Count > 0)
+			{
+				foreach (var charEvent in charEvents)
+				{
+					charEvent.Time = gametime;
+				}
+			}
 
-		private void HandleKeyboardPollingEvents(GameTime gametime)
-		{
 			var newState = Keyboard.GetState();
 			var keys = newState.GetPressedKeys();
 			bool altPressed = Keyboard.GetState().IsKeyDown(Keys.LeftAlt) || Keyboard.GetState().IsKeyDown(Keys.RightAlt);
@@ -153,28 +156,25 @@ namespace CloneGame.Input
 
 			oldState = newState;
 
+			List<KeyboardEvent> allEvents = new List<KeyboardEvent>();
+			if (charEvents != null) allEvents.AddRange(charEvents);
+			if (keyboardEvents != null) allEvents.AddRange(keyboardEvents);
+			
+
 			foreach (var reciver in keyboardRecivers)
 			{
-				reciver.HandleEvent(keyboardEvents.Where(e=>e.Handled == false));
-			}
-			keyboardEvents.Clear();
-		}
-
-		private void HandleKeyboardCharEvents(GameTime gametime)
-		{
-			if (charEvents.Count > 0)
-			{
-				foreach (var charEvent in charEvents)
+				var activeEvents = allEvents.Where(e => e.Handled == false);
+				if (activeEvents.Any())
 				{
-					charEvent.Time = gametime;
-				} 
-				foreach (var charEventReciver in charRecivers)
-				{
-					charEventReciver.HandleEvent(charEvents);
+					reciver.HandleEvent(activeEvents);	
 				}
-
-				charEvents.Clear();
+				
 			}
+			//allEvents.Clear();
+			charEvents.Clear();
+			keyboardEvents.Clear();
+
 		}
+
 	}
 }
