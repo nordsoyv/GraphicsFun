@@ -19,8 +19,11 @@ namespace CloneGame
 	class Player : IKeyboardEventReciver, IMouseEventReciver
 	{
 		private Vector3 position;
+		private Vector3 velocity = new Vector3( 0);
 		private Quaternion heading;
-
+		private Vector3 sumAcceleration;
+		private float acceleration = 0.5f;
+		private float MaxSpeed = 8.0f;
 
 		private float yaw;
 		private float pitch;
@@ -90,6 +93,7 @@ namespace CloneGame
 
 		public void HandleEvent(IEnumerable<KeyboardEvent> events)
 		{
+
 			IEnumerable<KeybuttonEvent> keybuttonEvents = events.OfType<KeybuttonEvent>();
 
 			var wButton = keybuttonEvents.Where(e => e.Key == Keys.W).Select(e => e).FirstOrDefault();
@@ -99,55 +103,70 @@ namespace CloneGame
 			var spaceButton = keybuttonEvents.Where(e => e.Key == Keys.Space).Select(e => e).FirstOrDefault();
 			var altButton = keybuttonEvents.Where(e => e.Key == Keys.LeftAlt).Select(e => e).FirstOrDefault();
 
+			sumAcceleration = Vector3.Zero;
+
 			if (wButton != null)
 			{
 				wButton.Handled = true;
-				MoveZ(0.1f);
+				MoveZ(1f);
 			}
 			if (sButton != null)
 			{
 				sButton.Handled = true;
-				MoveZ(-0.1f);
+				MoveZ(-1f);
 			}
 			if (aButton != null)
 			{
 				aButton.Handled = true;
-				MoveX(0.1f);
+				MoveX(1f);
 			}
 			if (dButton != null)
 			{
 				dButton.Handled = true;
-				MoveX(-0.1f);
+				MoveX(-1f);
 			}
 			if (spaceButton != null)
 			{
 				spaceButton.Handled = true;
-				MoveY(0.1f);
+				MoveY(1f);
 			}
 			if (altButton != null)
 			{
 				altButton.Handled = true;
-				MoveY(-0.1f);
+				MoveY(-1f);
 			}
 
+			if(sumAcceleration.Length()> 0.01f)
+			{
+				sumAcceleration.Normalize();
+				sumAcceleration *= acceleration;
+			}
 
 		}
 
 		private void MoveX(float amount)
 		{
-			Position += Vector3.Transform(new Vector3(amount, 0.0f, 0.0f), Heading);
+			
+			var r = Vector3.Transform(new Vector3(amount, 0.0f, 0.0f), Heading);
+			r.Normalize();
+			sumAcceleration += r;
+//			Position += Vector3.Transform(new Vector3(amount, 0.0f, 0.0f), Heading);
 		}
 
 
 		private void MoveY(float amount)
 		{
-			Position += new Vector3(0, amount, 0);
+			sumAcceleration += new Vector3(0, amount, 0);
+//			Position += new Vector3(0, amount, 0);
 		}
 
 
 		private void MoveZ(float amount)
 		{
-			Position += Vector3.Transform(new Vector3(0.0f, 0.0f, amount), Heading);
+			var r = Vector3.Transform(new Vector3(0.0f, 0.0f, amount), Heading);
+			r.Normalize();
+			sumAcceleration += r;
+//			Position += Vector3.Transform(new Vector3(0.0f, 0.0f, amount), Heading);
 		}
 
 		private void RotateZ(float xrmod)
@@ -165,9 +184,38 @@ namespace CloneGame
 		}
 
 
+		public void Update(GameTime gameTime)
+		{
+			var delta = gameTime.ElapsedGameTime.Milliseconds / 1000.0f;
+			if (sumAcceleration.Length() < 0.01f)
+			{
+				
+				if (velocity.Length() < 0.1f)
+				{
+					velocity = Vector3.Zero;
+					return;
+				}
+
+				sumAcceleration = velocity;
+				sumAcceleration.Normalize();
+				sumAcceleration *= -acceleration * 10 ; // slow down a bit faster than normal accel
+  
+			}
+			velocity += sumAcceleration * delta;
+			if(velocity.Length() >= MaxSpeed || velocity.Length() <= -MaxSpeed)
+			{
+				velocity.Normalize();
+				velocity *= MaxSpeed;
+			}
+			Move();
+			sumAcceleration = Vector3.Zero;
+			//Console.WriteLine("Vel:" + velocity.X + " , " + velocity.Y + " , " + velocity.Z);
+		}
 
 
-
-
+		private void Move()
+		{
+			Position += velocity;
+		}
 	}
 }

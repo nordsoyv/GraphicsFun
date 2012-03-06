@@ -111,6 +111,7 @@ namespace CloneGame
 
             ProcessInput(gameTime);
             //Mouse.SetPosition(WindowWidth / 2, WindowHeight / 2);
+        	player.Update(gameTime);
             base.Update(gameTime);
         }
 
