@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Text;
 using CloneGame.Input;
 using Microsoft.Xna.Framework;
@@ -29,6 +30,14 @@ namespace CloneGame
 			_device = device;
 			_generator = new PerlinGenerator();
             _effect = effect;
+
+			// set up observer 
+			var commands = from mes in MessageService.GetInstance().Messages
+			               where mes.MessageType == MessageType.Command
+			               where mes.Text == "/new"
+			               select mes;
+			commands.Subscribe(m => GenerateLandscape() );
+
 		}
 
 		public void GenerateLandscape()
@@ -200,13 +209,13 @@ namespace CloneGame
         {
 			foreach (var keyboardEvent in events)
 			{
-				if (typeof(KeybuttonEvent) == keyboardEvent.GetType())
+				if (typeof(CharButtonEvent) == keyboardEvent.GetType())
 				{
-					KeybuttonEvent e = (KeybuttonEvent)keyboardEvent;
-					if (e.Key == Microsoft.Xna.Framework.Input.Keys.N)
+					CharButtonEvent e = (CharButtonEvent)keyboardEvent;
+					if (e.Key == 'n' || e.Key == 'N')
 					{
 						e.Handled = true;
-						GenerateLandscape();
+						MessageService.GetInstance().Commandmessage("/new");
 					}
 				}
 			}

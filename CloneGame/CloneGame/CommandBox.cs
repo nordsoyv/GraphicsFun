@@ -46,13 +46,13 @@ namespace CloneGame
 				string tmpCommand = command;
 				spriteBatch.Begin();
 				spriteBatch.Draw(background, drawPos, Color.White);
-				while (font.MeasureString(tmpCommand).X >= background.Width - (marginX *2))
+				while (font.MeasureString(tmpCommand).X >= background.Width - (marginX * 2))
 				{
 					tmpCommand = tmpCommand.Substring(1);
 				}
 
-				spriteBatch.DrawString(font, tmpCommand, pos, Color.Gray);	
-				
+				spriteBatch.DrawString(font, tmpCommand, pos, Color.Gray);
+
 				spriteBatch.End();
 			}
 		}
@@ -69,6 +69,15 @@ namespace CloneGame
 
 				if (hasInput)
 				{
+					if (command.First() == '/')
+					{
+						MessageService.GetInstance().Commandmessage(command);
+					}
+					else
+					{
+						MessageService.GetInstance().LogMessage(command);
+					}
+
 					hasInput = false;
 					command = "";
 				}

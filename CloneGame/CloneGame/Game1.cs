@@ -40,6 +40,8 @@ namespace CloneGame
 
         private InputHandler inputHandler;
 
+    	private ConsoleOutMessageObserver _consoleOutMessageObserver;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -89,7 +91,7 @@ namespace CloneGame
 			inputHandler.RegisterKeyboardEventReciver(player);
 			inputHandler.RegisterMouseEventReciver(player);
 
-           
+        	_consoleOutMessageObserver = new ConsoleOutMessageObserver();
         }
 
         /// <summary>
