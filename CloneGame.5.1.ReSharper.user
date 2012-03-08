@@ -1,0 +1,750 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Game1.cs" caret="4043" fromTop="28" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="4537" fromTop="35" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="480" fromTop="21" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutMessageObserver.cs" caret="392" fromTop="23" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="3639" fromTop="23" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="4043" fromTop="39" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="3882" fromTop="23" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="2980" fromTop="9" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="3063" fromTop="14" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="3145" fromTop="19" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="3228" fromTop="24" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="3318" fromTop="29" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="3535" fromTop="42" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="5157" fromTop="37" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="4867" fromTop="26" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="708" fromTop="9" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="4694" fromTop="20" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="2119" fromTop="10" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="1378" fromTop="32" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="941" fromTop="17" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="719" fromTop="13" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="1161" fromTop="17" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="165" fromTop="9" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="1745" fromTop="34" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="2033" fromTop="45" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutMessageObserver.cs" caret="155" fromTop="6" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutMessageObserver.cs" caret="383" fromTop="21" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutMessageObserver.cs" caret="314" fromTop="16" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="90" fromTop="3" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="1035" fromTop="32" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="2122" fromTop="37" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="601" fromTop="12" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="480" fromTop="3" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutMessageObserver.cs" caret="276" fromTop="11" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="GraphicsDevice`0" priority="3" />
+      <Item value="device" priority="18" />
+      <Item value="GraphicsDevice" priority="0" />
+      <Item value="public" priority="27" />
+      <Item value="void" priority="17" />
+      <Item value="LeafNode`0" priority="2" />
+      <Item value="private" priority="45" />
+      <Item value="int" priority="32" />
+      <Item value="NewsStyleUriParser`0" priority="0" />
+      <Item value="new" priority="85" />
+      <Item value="BuildVertexBuffer`0" priority="0" />
+      <Item value="List" priority="14" />
+      <Item value="MyOwnVertexFormat`0" priority="1" />
+      <Item value="List&lt;MyOwnVertexFormat&gt;" priority="0" />
+      <Item value="vertices" priority="18" />
+      <Item value="for" priority="6" />
+      <Item value="if" priority="40" />
+      <Item value="cubes" priority="0" />
+      <Item value="x" priority="10" />
+      <Item value="MyOwnVertexFormat" priority="4" />
+      <Item value="Vector3" priority="23" />
+      <Item value="y" priority="3" />
+      <Item value="z" priority="1" />
+      <Item value="IndexBuffer`0" priority="0" />
+      <Item value="CreateVertices`0" priority="0" />
+      <Item value="List&lt;int&gt;" priority="0" />
+      <Item value="indexes" priority="11" />
+      <Item value="Int16`0" priority="0" />
+      <Item value="startIndex" priority="4" />
+      <Item value="AddTriangle`0" priority="5" />
+      <Item value="indexBuffer" priority="1" />
+      <Item value="IndexBuffer" priority="0" />
+      <Item value="sizeof" priority="1" />
+      <Item value="BufferUsage`0" priority="0" />
+      <Item value="IndexElementSize`0" priority="0" />
+      <Item value="Color`0" priority="11" />
+      <Item value="this" priority="10" />
+      <Item value="color" priority="3" />
+      <Item value="Color" priority="4" />
+      <Item value="Matrix`0" priority="7" />
+      <Item value="Effect`0" priority="0" />
+      <Item value="node" priority="6" />
+      <Item value="LeafNode" priority="1" />
+      <Item value="prop" priority="9" />
+      <Item value="Vector3`0" priority="31" />
+      <Item value="Camera`0" priority="1" />
+      <Item value="GraphicsDeviceManager`0" priority="1" />
+      <Item value="Position" priority="10" />
+      <Item value="Lookat" priority="0" />
+      <Item value="camera" priority="7" />
+      <Item value="Camera" priority="0" />
+      <Item value="gameTime" priority="15" />
+      <Item value="numIndexes" priority="1" />
+      <Item value="numVertices" priority="4" />
+      <Item value="graphics" priority="1" />
+      <Item value="Keyboard`0" priority="5" />
+      <Item value="Keys`0" priority="8" />
+      <Item value="PrimitiveType`0" priority="1" />
+      <Item value="ClearOptions`0" priority="0" />
+      <Item value="typeof" priority="2" />
+      <Item value="vertexBuffer" priority="2" />
+      <Item value="VertexBuffer" priority="0" />
+      <Item value="Length" priority="2" />
+      <Item value="normal" priority="0" />
+      <Item value="pos1" priority="1" />
+      <Item value="pos2" priority="1" />
+      <Item value="pos3" priority="1" />
+      <Item value="normalBottom" priority="2" />
+      <Item value="Math`0" priority="0" />
+      <Item value="Random`0" priority="3" />
+      <Item value="Random" priority="2" />
+      <Item value="r" priority="9" />
+      <Item value="IFormatProvider`0" priority="0" />
+      <Item value="BoundingBox`0" priority="4" />
+      <Item value="boundingBoxes" priority="2" />
+      <Item value="List&lt;BoundingBox&gt;" priority="1" />
+      <Item value="BoundingBox" priority="0" />
+      <Item value="pos0" priority="1" />
+      <Item value="pos7" priority="0" />
+      <Item value="float" priority="13" />
+      <Item value="startPos" priority="2" />
+      <Item value="xPos" priority="0" />
+      <Item value="yPos" priority="0" />
+      <Item value="zPos" priority="0" />
+      <Item value="sideSize" priority="1" />
+      <Item value="size" priority="0" />
+      <Item value="const" priority="5" />
+      <Item value="nodes" priority="0" />
+      <Item value="List&lt;LeafNode&gt;" priority="0" />
+      <Item value="foreach" priority="10" />
+      <Item value="leafNode" priority="0" />
+      <Item value="CreateNodes`0" priority="0" />
+      <Item value="RandomGenerator`0" priority="3" />
+      <Item value="rand" priority="1" />
+      <Item value="double" priority="3" />
+      <Item value="return" priority="8" />
+      <Item value="_generator" priority="4" />
+      <Item value="RandomGenerator" priority="0" />
+      <Item value="generator" priority="2" />
+      <Item value="NODE_SIZE" priority="5" />
+      <Item value="startX" priority="0" />
+      <Item value="startZ" priority="0" />
+      <Item value="sample" priority="6" />
+      <Item value="class" priority="4" />
+      <Item value="IGenerator`0" priority="1" />
+      <Item value="_basis" priority="15" />
+      <Item value="PerlinGenerator`0" priority="4" />
+      <Item value="GradientNoiseBasis" priority="1" />
+      <Item value="position" priority="7" />
+      <Item value="_seed" priority="4" />
+      <Item value="seed" priority="1" />
+      <Item value="Standard" priority="1" />
+      <Item value="System" priority="2" />
+      <Item value="Console`0" priority="8" />
+      <Item value="Sample`0" priority="1" />
+      <Item value="var" priority="14" />
+      <Item value="LibNoise" priority="1" />
+      <Item value="Perlin`0" priority="2" />
+      <Item value="location" priority="2" />
+      <Item value="Landscape`0" priority="3" />
+      <Item value="_device" priority="1" />
+      <Item value="GeneratingLeafNode`0" priority="1" />
+      <Item value="landscape" priority="3" />
+      <Item value="Landscape" priority="0" />
+      <Item value="cubeSize" priority="0" />
+      <Item value="value" priority="2" />
+      <Item value="BasicNode`0" priority="0" />
+      <Item value="LandscapeNode`0" priority="3" />
+      <Item value="SetDataOptions`0" priority="0" />
+      <Item value="VertexBuffer`0" priority="1" />
+      <Item value="buffer" priority="0" />
+      <Item value="numVert" priority="1" />
+      <Item value="override" priority="0" />
+      <Item value="GameTime`0" priority="3" />
+      <Item value="base" priority="0" />
+      <Item value="BuildBuffers`0" priority="0" />
+      <Item value="boundingBoxs" priority="4" />
+      <Item value="_nodes" priority="0" />
+      <Item value="startBufferPos" priority="3" />
+      <Item value="numTris" priority="2" />
+      <Item value="numTriangles" priority="1" />
+      <Item value="Quaternion`0" priority="15" />
+      <Item value="EventArgs`0" priority="0" />
+      <Item value="OnChanged`0" priority="0" />
+      <Item value="PlayerInfoChangedHandlerEventArgs" priority="0" />
+      <Item value="e" priority="21" />
+      <Item value="Heading" priority="15" />
+      <Item value="Player`0" priority="1" />
+      <Item value="player" priority="6" />
+      <Item value="Player" priority="0" />
+      <Item value="Quaternion" priority="4" />
+      <Item value="p" priority="0" />
+      <Item value="playerInfoChangedHandlerEventArgs" priority="1" />
+      <Item value="camLookat" priority="2" />
+      <Item value="keyboard" priority="0" />
+      <Item value="switch" priority="0" />
+      <Item value="state" priority="11" />
+      <Item value="movementVector" priority="5" />
+      <Item value="heading" priority="1" />
+      <Item value="Mouse`0" priority="5" />
+      <Item value="GameWindow`0" priority="2" />
+      <Item value="windowWidth" priority="0" />
+      <Item value="windowHeight" priority="0" />
+      <Item value="q" priority="0" />
+      <Item value="rotation" priority="2" />
+      <Item value="WindowWidth" priority="0" />
+      <Item value="WindowHeight" priority="0" />
+      <Item value="amount" priority="7" />
+      <Item value="MoveY`0" priority="1" />
+      <Item value="MoveX`0" priority="0" />
+      <Item value="RotateX`0" priority="0" />
+      <Item value="xrmod" priority="2" />
+      <Item value="MathHelper`0" priority="4" />
+      <Item value="nRot" priority="1" />
+      <Item value="vectorPart" priority="0" />
+      <Item value="rot" priority="1" />
+      <Item value="zrmod" priority="1" />
+      <Item value="pitch" priority="7" />
+      <Item value="yaw" priority="5" />
+      <Item value="SpriteFont`0" priority="2" />
+      <Item value="Font" priority="1" />
+      <Item value="Content" priority="0" />
+      <Item value="Vector2`0" priority="1" />
+      <Item value="Vector2" priority="4" />
+      <Item value="fontPos" priority="1" />
+      <Item value="spriteBatch" priority="3" />
+      <Item value="output" priority="0" />
+      <Item value="effect" priority="0" />
+      <Item value="null" priority="1" />
+      <Item value="FPSDisplay`0" priority="0" />
+      <Item value="fpsDisplay" priority="1" />
+      <Item value="FPSDisplay" priority="0" />
+      <Item value="font" priority="3" />
+      <Item value="Game`0" priority="0" />
+      <Item value="ToString`0" priority="0" />
+      <Item value="ThreadStaticAttribute`0" priority="0" />
+      <Item value="IObserver" priority="4" />
+      <Item value="enum" priority="2" />
+      <Item value="MouseEventType`0" priority="0" />
+      <Item value="ctor" priority="0" />
+      <Item value="MouseEvent`0" priority="3" />
+      <Item value="IMouseEventReciver`0" priority="3" />
+      <Item value="mouseRecivers" priority="1" />
+      <Item value="List&lt;IMouseEventReciver&gt;" priority="0" />
+      <Item value="lastMouseY" priority="4" />
+      <Item value="lastMouseX" priority="3" />
+      <Item value="mouseEvents" priority="4" />
+      <Item value="List&lt;MouseEvent&gt;" priority="0" />
+      <Item value="MouseEvent" priority="0" />
+      <Item value="mEvent" priority="2" />
+      <Item value="reciver" priority="0" />
+      <Item value="events" priority="9" />
+      <Item value="Movement" priority="0" />
+      <Item value="movement" priority="1" />
+      <Item value="HandleMouseInput`0" priority="0" />
+      <Item value="gametime" priority="2" />
+      <Item value="bool" priority="10" />
+      <Item value="keys" priority="1" />
+      <Item value="shiftPressed" priority="1" />
+      <Item value="altPressed" priority="2" />
+      <Item value="ctrlPressed" priority="0" />
+      <Item value="Shift" priority="1" />
+      <Item value="Ctrl" priority="0" />
+      <Item value="ctrPressed" priority="0" />
+      <Item value="Alt" priority="1" />
+      <Item value="else" priority="5" />
+      <Item value="hasInput" priority="4" />
+      <Item value="string" priority="4" />
+      <Item value="command" priority="9" />
+      <Item value="posX" priority="0" />
+      <Item value="posY" priority="0" />
+      <Item value="marginX" priority="2" />
+      <Item value="marginY" priority="0" />
+      <Item value="keyboardEvent" priority="10" />
+      <Item value="Enum`0" priority="0" />
+      <Item value="Handled" priority="0" />
+      <Item value="false" priority="3" />
+      <Item value="enterEvent" priority="0" />
+      <Item value="true" priority="6" />
+      <Item value="WaveInCapture" priority="0" />
+      <Item value="esc" priority="0" />
+      <Item value="letter" priority="2" />
+      <Item value="KeyboardEventType`0" priority="1" />
+      <Item value="EventType" priority="0" />
+      <Item value="type" priority="0" />
+      <Item value="KeyboardState`0" priority="0" />
+      <Item value="oldState" priority="2" />
+      <Item value="Held" priority="0" />
+      <Item value="newState" priority="1" />
+      <Item value="AccessViolationException`0" priority="0" />
+      <Item value="Pressed" priority="2" />
+      <Item value="keyboardEvents" priority="14" />
+      <Item value="B" priority="0" />
+      <Item value="C" priority="0" />
+      <Item value="E" priority="0" />
+      <Item value="F" priority="0" />
+      <Item value="G" priority="0" />
+      <Item value="H" priority="0" />
+      <Item value="I" priority="0" />
+      <Item value="J" priority="0" />
+      <Item value="K" priority="0" />
+      <Item value="A" priority="2" />
+      <Item value="N" priority="0" />
+      <Item value="O" priority="0" />
+      <Item value="P" priority="0" />
+      <Item value="S" priority="0" />
+      <Item value="T" priority="0" />
+      <Item value="U" priority="0" />
+      <Item value="V" priority="0" />
+      <Item value="W" priority="0" />
+      <Item value="X" priority="0" />
+      <Item value="Y" priority="0" />
+      <Item value="Z" priority="0" />
+      <Item value="Space" priority="0" />
+      <Item value="legalKeys" priority="0" />
+      <Item value="Concat`1" priority="0" />
+      <Item value="Contains`1" priority="1" />
+      <Item value="Decimal" priority="0" />
+      <Item value="InputSystem`0" priority="11" />
+      <Item value="window" priority="0" />
+      <Item value="object" priority="2" />
+      <Item value="eventArgs" priority="8" />
+      <Item value="KeyEventArgs`0" priority="0" />
+      <Item value="CharacterEventArgs`0" priority="0" />
+      <Item value="CharEnteredHandler`0" priority="0" />
+      <Item value="CharEventHandler`0" priority="0" />
+      <Item value="KeyboardEventHandler`0" priority="0" />
+      <Item value="MouseEventHandler`0" priority="0" />
+      <Item value="KeyboardEvent`0" priority="2" />
+      <Item value="args" priority="2" />
+      <Item value="interface" priority="0" />
+      <Item value="IEventReciver" priority="1" />
+      <Item value="CharButtonEvent`0" priority="2" />
+      <Item value="ICharEventReciver`0" priority="2" />
+      <Item value="charRecivers" priority="1" />
+      <Item value="List&lt;ICharEventReciver&gt;" priority="0" />
+      <Item value="charEvents" priority="7" />
+      <Item value="charEvent" priority="0" />
+      <Item value="KeybuttonEvent`0" priority="3" />
+      <Item value="keyboardRecivers" priority="2" />
+      <Item value="List&lt;KeybuttonEvent&gt;" priority="1" />
+      <Item value="KeybuttonEventType`0" priority="0" />
+      <Item value="charEventReciver" priority="0" />
+      <Item value="charButtonEvent" priority="0" />
+      <Item value="backSpace" priority="0" />
+      <Item value="measure" priority="1" />
+      <Item value="background" priority="2" />
+      <Item value="pos" priority="0" />
+      <Item value="None" priority="0" />
+      <Item value="tmpCommand" priority="3" />
+      <Item value="while" priority="0" />
+      <Item value="KeybuttonEvent" priority="0" />
+      <Item value="keybuttonEvent" priority="1" />
+      <Item value="keyboardEventReciver" priority="0" />
+      <Item value="IEnumerable" priority="4" />
+      <Item value="IKeyboardEventReciver`0" priority="0" />
+      <Item value="allEvents" priority="1" />
+      <Item value="char" priority="0" />
+      <Item value="ArgumentOutOfRangeException`0" priority="0" />
+      <Item value="game" priority="0" />
+      <Item value="GenerateLandscape`0" priority="0" />
+      <Item value="activeEvents" priority="0" />
+      <Item value="sumAcceleration" priority="15" />
+      <Item value="acceleration" priority="2" />
+      <Item value="velocity" priority="15" />
+      <Item value="IDictionary" priority="0" />
+      <Item value="Move`0" priority="0" />
+      <Item value="MaxSpeed" priority="2" />
+      <Item value="delta" priority="0" />
+      <Item value="IObservable" priority="2" />
+      <Item value="MessageService`0" priority="8" />
+      <Item value="static" priority="0" />
+      <Item value="instance" priority="2" />
+      <Item value="MessageService" priority="0" />
+      <Item value="observers" priority="0" />
+      <Item value="Message`0" priority="6" />
+      <Item value="observer" priority="0" />
+      <Item value="MessageType`0" priority="0" />
+      <Item value="DateTime`0" priority="1" />
+      <Item value="m" priority="6" />
+      <Item value="Log" priority="0" />
+      <Item value="text" priority="0" />
+      <Item value="SendMessage`0" priority="0" />
+      <Item value="ConsoleOutMessageObserver`0" priority="0" />
+      <Item value="from" priority="2" />
+      <Item value="in" priority="1" />
+      <Item value="select" priority="0" />
+      <Item value="where" priority="2" />
+      <Item value="ms" priority="1" />
+      <Item value="a" priority="0" />
+      <Item value="WriteMessage`0" priority="0" />
+      <Item value="using" priority="0" />
+      <Item value="AppDomainSetup`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="ToArray`0" priority="2" />
+      <Item value="Count" priority="16" />
+      <Item value="Add`0" priority="19" />
+      <Item value="Where`1" priority="7" />
+      <Item value="Remove`0" priority="1" />
+      <Item value="RemoveAll`0" priority="0" />
+      <Item value="GetEnumerator`0" priority="0" />
+      <Item value="Clear`0" priority="4" />
+      <Item value="AddRange`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Graphics.BufferUsage">
+      <Item value="WriteOnly" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Graphics.IndexBuffer">
+      <Item value="SetData`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Graphics.IndexElementSize">
+      <Item value="ThirtyTwoBits" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.MyOwnVertexFormat">
+      <Item value="color" priority="0" />
+      <Item value="position" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Matrix">
+      <Item value="Identity" priority="1" />
+      <Item value="CreateLookAt`0" priority="1" />
+      <Item value="CreateFromQuaternion`0" priority="0" />
+      <Item value="Transform`0" priority="0" />
+      <Item value="CreateFromYawPitchRoll`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Camera">
+      <Item value="device" priority="0" />
+      <Item value="Position" priority="1" />
+      <Item value="Lookat" priority="0" />
+      <Item value="GetViewMatrix`0" priority="1" />
+      <Item value="GetProjectionMatrix`0" priority="1" />
+      <Item value="Heading" priority="0" />
+      <Item value="Registerplayer`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.LeafNode">
+      <Item value="Draw`0" priority="2" />
+      <Item value="device" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.GraphicsDeviceManager">
+      <Item value="GraphicsDevice" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Input.Keyboard">
+      <Item value="GetState`0" priority="6" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Input.KeyboardState">
+      <Item value="IsKeyDown`0" priority="5" />
+      <Item value="GetPressedKeys`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Input.Keys">
+      <Item value="Escape" priority="0" />
+      <Item value="N" priority="0" />
+      <Item value="W" priority="0" />
+      <Item value="Space" priority="0" />
+      <Item value="LeftAlt" priority="1" />
+      <Item value="LeftShift" priority="0" />
+      <Item value="RightShift" priority="0" />
+      <Item value="RightAlt" priority="0" />
+      <Item value="LeftControl" priority="0" />
+      <Item value="RightControl" priority="0" />
+      <Item value="A" priority="0" />
+      <Item value="D" priority="0" />
+      <Item value="L" priority="0" />
+      <Item value="M" priority="0" />
+      <Item value="Q" priority="0" />
+      <Item value="R" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Graphics.GraphicsDevice">
+      <Item value="DrawPrimitives`0" priority="1" />
+      <Item value="Clear`0" priority="0" />
+      <Item value="Viewport" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Graphics.PrimitiveType">
+      <Item value="TriangleList" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Graphics.ClearOptions">
+      <Item value="Target" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Color">
+      <Item value="Black" priority="1" />
+      <Item value="White" priority="4" />
+      <Item value="Gray" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Graphics.CullMode">
+      <Item value="CullClockwiseFace" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Random">
+      <Item value="NextDouble`0" priority="3" />
+      <Item value="Next`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.RandomGenerator">
+      <Item value="Sample`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LibNoise.GradientNoiseBasis">
+      <Item value="GradientCoherentNoise`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Vector3">
+      <Item value="X" priority="3" />
+      <Item value="Y" priority="3" />
+      <Item value="Z" priority="2" />
+      <Item value="Length`0" priority="7" />
+      <Item value="Normalize`0" priority="5" />
+      <Item value="ToString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="WriteLine`0" priority="6" />
+      <Item value="Write`0" priority="0" />
+      <Item value="Out" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Double">
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:LibNoise.Perlin">
+      <Item value="GetValue`0" priority="1" />
+      <Item value="Seed" priority="2" />
+      <Item value="OctaveCount" priority="2" />
+      <Item value="Frequency" priority="0" />
+      <Item value="NoiseQuality" priority="0" />
+      <Item value="Persistence" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Landscape">
+      <Item value="GenerateLandscape`0" priority="1" />
+      <Item value="Draw`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.PerlinGenerator">
+      <Item value="Seed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.BasicNode">
+      <Item value="Draw`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.LandscapeNode">
+      <Item value="SetData`0" priority="0" />
+      <Item value="startBufferPos" priority="0" />
+      <Item value="numTriangles" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.PlayerInfoChangedHandlerEventArgs">
+      <Item value="Heading" priority="1" />
+      <Item value="Position" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Player">
+      <Item value="Position" priority="0" />
+      <Item value="Heading" priority="0" />
+      <Item value="Changed" priority="0" />
+      <Item value="GetInput`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Quaternion">
+      <Item value="Identity" priority="1" />
+      <Item value="Concatenate`0" priority="0" />
+      <Item value="Multiply`0" priority="0" />
+      <Item value="CreateFromAxisAngle`0" priority="1" />
+      <Item value="CreateFromYawPitchRoll`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Vector3">
+      <Item value="Transform`0" priority="5" />
+      <Item value="Multiply`0" priority="0" />
+      <Item value="Right" priority="1" />
+      <Item value="Left" priority="0" />
+      <Item value="Up" priority="0" />
+      <Item value="Zero" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.Input.Mouse">
+      <Item value="GetState`0" priority="2" />
+      <Item value="SetPosition`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Input.MouseState">
+      <Item value="X" priority="5" />
+      <Item value="Y" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.TextWriter">
+      <Item value="WriteLine`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Quaternion">
+      <Item value="Normalize`0" priority="2" />
+      <Item value="W" priority="1" />
+      <Item value="ToString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="CompareTo`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.Xna.Framework.MathHelper">
+      <Item value="Pi" priority="0" />
+      <Item value="ToRadians`0" priority="0" />
+      <Item value="PiOver4" priority="0" />
+      <Item value="TwoPi" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Content.ContentManager">
+      <Item value="Load`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Graphics.SpriteBatch">
+      <Item value="DrawString`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Graphics.Viewport">
+      <Item value="X" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Graphics.Effect">
+      <Item value="CurrentTechnique" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.FPSDisplay">
+      <Item value="font" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.GameTime">
+      <Item value="ElapsedGameTime" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.TimeSpan">
+      <Item value="Milliseconds" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="Sleep`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Input.MouseEvent">
+      <Item value="Time" priority="0" />
+      <Item value="EventType" priority="1" />
+      <Item value="XMovement" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CloneGame.Input.MouseEvent">
+      <Item value="MouseEventType`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CloneGame.Input.MouseEvent+MouseEventType">
+      <Item value="Movement" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Input.IMouseEventReciver">
+      <Item value="HandleEvent`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Select`2" priority="3" />
+      <Item value="Cast`1" priority="0" />
+      <Item value="Count`1" priority="1" />
+      <Item value="First`1" priority="4" />
+      <Item value="Where`1" priority="2" />
+      <Item value="FirstOrDefault`1" priority="0" />
+      <Item value="ToList`1" priority="0" />
+      <Item value="OfType`1" priority="1" />
+      <Item value="Any`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Input.KeyboardEvent">
+      <Item value="Key" priority="4" />
+      <Item value="Handled" priority="10" />
+      <Item value="Shift" priority="1" />
+      <Item value="EventType" priority="1" />
+      <Item value="Alt" priority="1" />
+      <Item value="Ctrl" priority="0" />
+      <Item value="Time" priority="0" />
+      <Item value="GetType`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Input.Keys">
+      <Item value="GetTypeCode`0" priority="0" />
+      <Item value="HasFlag`0" priority="0" />
+      <Item value="ToString`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="CompareTo`0" priority="0" />
+      <Item value="ToLower`0" priority="0" />
+      <Item value="ToUpper`0" priority="0" />
+      <Item value="Length" priority="3" />
+      <Item value="Substring`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CloneGame.Input.KeyboardEvent+KeyboardEventType">
+      <Item value="Pressed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CloneGame.Input.InputSystem">
+      <Item value="Initialize`0" priority="0" />
+      <Item value="CharEntered" priority="0" />
+      <Item value="KeyDown" priority="0" />
+      <Item value="KeyUp" priority="0" />
+      <Item value="MouseDoubleClick" priority="0" />
+      <Item value="AltDown" priority="1" />
+      <Item value="CtrlDown" priority="1" />
+      <Item value="ShiftDown" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Game1">
+      <Item value="Window" priority="0" />
+      <Item value="Exit`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Input.CharacterEventArgs">
+      <Item value="Character" priority="1" />
+      <Item value="RepeatCount" priority="0" />
+      <Item value="AltPressed" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Input.KeyEventArgs">
+      <Item value="KeyCode" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Input.CharButtonEvent">
+      <Item value="Key" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Char">
+      <Item value="Equals`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Input.ICharEventReciver">
+      <Item value="GetType`0" priority="0" />
+      <Item value="HandleEvent`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Graphics.SpriteFont">
+      <Item value="MeasureString`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Vector2">
+      <Item value="Y" priority="0" />
+      <Item value="X" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Graphics.Texture2D">
+      <Item value="Width" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Input.KeybuttonEvent">
+      <Item value="Time" priority="0" />
+      <Item value="Handled" priority="3" />
+      <Item value="Key" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Input.IKeyboardEventReciver">
+      <Item value="HandleEvent`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IObserver`1">
+      <Item value="OnNext`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Message">
+      <Item value="MessageType" priority="0" />
+      <Item value="Text" priority="1" />
+      <Item value="Time" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.DateTime">
+      <Item value="Now" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CloneGame.MessageService">
+      <Item value="GetInstance`0" priority="5" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.MessageService">
+      <Item value="Subscribe`0" priority="1" />
+      <Item value="Messages" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
