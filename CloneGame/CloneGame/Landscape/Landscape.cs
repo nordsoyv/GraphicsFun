@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace CloneGame.Landscape
 {
-	class Landscape : IKeyboardEventReciver
+	class Landscape
 	{
 
 
@@ -30,11 +30,11 @@ namespace CloneGame.Landscape
             _effect = effect;
 
 			// set up observer 
-			var commands = from mes in MessageService.GetInstance().Messages
-			               where mes.MessageType == MessageType.Command
-			               where mes.Text == Commands.NEW_LANDSCAPE
-			               select mes;
-			commands.Subscribe(m => GenerateLandscape() );
+			//var commands = from mes in MessageService.GetInstance().Messages
+			    //           where mes.MessageType == MessageType.Command
+			     //          where mes.Text == Commands.NEW_LANDSCAPE
+			      //         select mes;
+			//commands.Subscribe(m => GenerateLandscape() );
 			
 			CommandService.RegisterCommand(Commands.NEW_LANDSCAPE, () => GenerateLandscape());
 
@@ -202,26 +202,6 @@ namespace CloneGame.Landscape
 			vertices.Add(new MyOwnVertexFormat(v1, normal, color));
 			vertices.Add(new MyOwnVertexFormat(v2, normal, color));
 		}
-
-
-
-		public void HandleEvent(IEnumerable<KeyboardEvent> events)
-        {
-			foreach (var keyboardEvent in events)
-			{
-				if (typeof(CharButtonEvent) == keyboardEvent.GetType())
-				{
-					CharButtonEvent e = (CharButtonEvent)keyboardEvent;
-					if (e.Key == 'n' || e.Key == 'N')
-					{
-						e.Handled = true;
-						//MessageService.Commandmessage(Commands.NEW_LANDSCAPE);
-						CommandService.ExecuteCommand(Commands.NEW_LANDSCAPE);
-					}
-				}
-			}
-
-        }
 
 	}
 

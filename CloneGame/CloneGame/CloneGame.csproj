@@ -113,6 +113,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Input\KeyBindingHandler.cs" />
     <Compile Include="Landscape\BasicNode.cs" />
     <Compile Include="Camera.cs" />
     <Compile Include="CommandBox.cs" />
@@ -127,6 +128,8 @@
     <Compile Include="Input\KeybuttonEvent.cs" />
     <Compile Include="Input\KeyBoardReciver.cs" />
     <Compile Include="Landscape\Landscape.cs" />
+    <Compile Include="Landscape\LandscapeNode.cs" />
+    <Compile Include="Landscape\PerlinGenerator.cs" />
     <Compile Include="Messaging\Commands.cs" />
     <Compile Include="Messaging\CommandService.cs" />
     <Compile Include="Messaging\MessageService.cs" />

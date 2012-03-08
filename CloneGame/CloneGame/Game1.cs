@@ -25,7 +25,6 @@ namespace CloneGame
 
         private GraphicsDevice device;
         private Effect effect;
-        private GeneratingLeafNode node;
         private Camera camera;
         private Player player;
         //private List<GeneratingLeafNode> nodes;
@@ -42,6 +41,8 @@ namespace CloneGame
         private InputHandler inputHandler;
 
     	private ConsoleOutMessageObserver _consoleOutMessageObserver;
+
+    	private KeyBindingHandler bindingHandler;
 
         public Game1()
         {
@@ -85,10 +86,13 @@ namespace CloneGame
             landscape.GenerateLandscape();
             commandBox = new CommandBox(device, Content);
 
+        	 bindingHandler = new KeyBindingHandler();
+
             inputHandler = new InputHandler(this.Window);
             inputHandler.RegisterKeyboardEventReciver(new ExitgameEventHandler(this));
 			inputHandler.RegisterKeyboardEventReciver(commandBox);
-            inputHandler.RegisterKeyboardEventReciver(landscape);
+			inputHandler.RegisterKeyboardEventReciver(bindingHandler);
+			//inputHandler.RegisterKeyboardEventReciver(landscape);
 			inputHandler.RegisterKeyboardEventReciver(player);
 			inputHandler.RegisterMouseEventReciver(player);
 

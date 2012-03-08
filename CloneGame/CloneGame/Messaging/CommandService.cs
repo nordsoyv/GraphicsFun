@@ -32,9 +32,7 @@ namespace CloneGame.Messaging
 		{
 			if (GetInstance().commands.ContainsKey(commandName))
 			{
-				Action a = GetInstance().commands[commandName];
-				a.Invoke();
-				
+				GetInstance().commands[commandName].Invoke();
 			}
 		}
 	}
