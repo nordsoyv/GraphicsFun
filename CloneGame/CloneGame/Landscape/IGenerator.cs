@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace CloneGame
+namespace CloneGame.Landscape
 {
 	internal interface IGenerator
 	{

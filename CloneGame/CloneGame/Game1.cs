@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using CloneGame.Input;
+using CloneGame.Landscape;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -30,7 +31,7 @@ namespace CloneGame
         //private List<GeneratingLeafNode> nodes;
         //private IGenerator _generator;
 
-        private Landscape landscape;
+        private Landscape.Landscape landscape;
 
         private SpriteFont Font;
 
@@ -80,7 +81,7 @@ namespace CloneGame
             player.Heading = Quaternion.Identity;
             camera = new Camera(device);
             camera.Registerplayer(player);
-            landscape = new Landscape(device,effect);
+            landscape = new Landscape.Landscape(device,effect);
             landscape.GenerateLandscape();
             commandBox = new CommandBox(device, Content);
 

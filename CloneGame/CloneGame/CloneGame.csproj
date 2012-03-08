@@ -113,26 +113,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasicNode.cs" />
+    <Compile Include="Landscape\BasicNode.cs" />
     <Compile Include="Camera.cs" />
     <Compile Include="CommandBox.cs" />
     <Compile Include="ExitgameEventHandler.cs" />
     <Compile Include="FPSDisplay.cs" />
-    <Compile Include="IGenerator.cs" />
-    <Compile Include="GeneratingLeafNode.cs" />
-    <Compile Include="INode.cs" />
+    <Compile Include="Landscape\IGenerator.cs" />
+    <Compile Include="Landscape\GeneratingLeafNode.cs" />
+    <Compile Include="Landscape\INode.cs" />
     <Compile Include="Input\ConsoleOutMessageObserver.cs" />
     <Compile Include="Input\InputHandler.cs" />
     <Compile Include="Input\InputSystem.cs" />
     <Compile Include="Input\KeybuttonEvent.cs" />
     <Compile Include="Input\KeyBoardReciver.cs" />
-    <Compile Include="Landscape.cs" />
-    <Compile Include="MessageService.cs" />
+    <Compile Include="Landscape\Landscape.cs" />
+    <Compile Include="Messaging\Commands.cs" />
+    <Compile Include="Messaging\CommandService.cs" />
+    <Compile Include="Messaging\MessageService.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
-    <Compile Include="RandomGenerator.cs" />
+    <Compile Include="Landscape\RandomGenerator.cs" />
     <Compile Include="VertexFormat.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-
-namespace CloneGame
+namespace CloneGame.Messaging
 {
 	internal enum MessageType
 	{
@@ -38,31 +36,31 @@ namespace CloneGame
 		}
 
 
-		public void SendMessage(Message m)
+		public static void SendMessage(Message m)
 		{
-			channel.SendMessage(m);
+			instance.channel.SendMessage(m);
 		}
 
 
-		public void LogMessage(string text)
+		public static void LogMessage(string text)
 		{
 			var m = new Message();
 			m.MessageType = MessageType.Log;
 			m.Text = text;
 			m.Time = DateTime.Now;
-			channel.SendMessage(m);
+			instance.channel.SendMessage(m);
 		}
 
-		public void DebugMessage(string text)
+		public static void DebugMessage(string text)
 		{
 			var m = new Message();
 			m.MessageType = MessageType.Debug;
 			m.Text = text;
 			m.Time = DateTime.Now;
-			channel.SendMessage(m);
+			instance.channel.SendMessage(m);
 		}
 
-		public void Commandmessage(string text)
+		public static void Commandmessage(string text)
 		{
 			var m = new Message();
 			if (text.First() == '/')
@@ -70,7 +68,7 @@ namespace CloneGame
 				m.MessageType = MessageType.Command;
 				m.Text = text;
 				m.Time = DateTime.Now;
-				channel.SendMessage(m);
+				instance.channel.SendMessage(m);
 			}
 			else
 			{

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using CloneGame.Input;
+using CloneGame.Messaging;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Graphics;
@@ -71,11 +72,11 @@ namespace CloneGame
 				{
 					if (command.First() == '/')
 					{
-						MessageService.GetInstance().Commandmessage(command);
+						MessageService.Commandmessage(command);
 					}
 					else
 					{
-						MessageService.GetInstance().LogMessage(command);
+						MessageService.LogMessage(command);
 					}
 
 					hasInput = false;

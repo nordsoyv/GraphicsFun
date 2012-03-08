@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reactive.Linq;
-using System.Text;
 using CloneGame.Input;
+using CloneGame.Messaging;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-
-namespace CloneGame
+namespace CloneGame.Landscape
 {
 	class Landscape : IKeyboardEventReciver
 	{
@@ -34,9 +32,11 @@ namespace CloneGame
 			// set up observer 
 			var commands = from mes in MessageService.GetInstance().Messages
 			               where mes.MessageType == MessageType.Command
-			               where mes.Text == "/new"
+			               where mes.Text == Commands.NEW_LANDSCAPE
 			               select mes;
 			commands.Subscribe(m => GenerateLandscape() );
+			
+			CommandService.RegisterCommand(Commands.NEW_LANDSCAPE, () => GenerateLandscape());
 
 		}
 
@@ -215,7 +215,8 @@ namespace CloneGame
 					if (e.Key == 'n' || e.Key == 'N')
 					{
 						e.Handled = true;
-						MessageService.GetInstance().Commandmessage("/new");
+						//MessageService.Commandmessage(Commands.NEW_LANDSCAPE);
+						CommandService.ExecuteCommand(Commands.NEW_LANDSCAPE);
 					}
 				}
 			}

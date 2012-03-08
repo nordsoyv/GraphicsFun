@@ -1,28 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using LibNoise;
 using Microsoft.Xna.Framework;
 
-namespace CloneGame
+namespace CloneGame.Landscape
 {
-	class RandomGenerator : IGenerator
-	{
-		private Random rand;
-
-		public RandomGenerator()
-		{
-			rand = new Random();
-		}
-
-		public double Sample(Vector3 position)
-		{
-			return rand.NextDouble();
-		}
-
-	}
-
 	internal class PerlinGenerator : IGenerator
 	{
 		private Perlin _basis;
