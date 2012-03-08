@@ -1,36 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Text;
 using CloneGame.Input;
+using CloneGame.Messaging;
 
 namespace CloneGame
 {
-    class ExitgameEventHandler : IKeyboardEventReciver
+    class ExitgameEventHandler 
     {
-        private Game1 game;
+        private readonly Game1 _game;
 
-		public void HandleEvent(IEnumerable<KeyboardEvent> events)
-        {
-
-			foreach (var keyboardEvent in events)
-			{
-				if (typeof(KeybuttonEvent) == keyboardEvent.GetType())
-				{
-					KeybuttonEvent e = (KeybuttonEvent) keyboardEvent;
-					if(e.Key == Microsoft.Xna.Framework.Input.Keys.Escape)
-					{
-						e.Handled = true;
-						game.Exit();
-					}
-				}
-			}
-
-        }
+		private void QuitGame()
+		{
+			_game.Exit();
+		}
 
         public ExitgameEventHandler( Game1 game)
         {
-            this.game = game;
+            _game = game;
+
+        	var commands = from mes in MessageService.GetInstance().Messages
+        	               where mes.MessageType == MessageType.Command
+        	               where mes.Text == Commands.QUIT
+        	               select mes;
+
+        	commands.Subscribe(m => QuitGame());
+
+			CommandService.RegisterCommand(Commands.QUIT, QuitGame);
         }
     }
 }

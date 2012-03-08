@@ -10,11 +10,11 @@ namespace CloneGame.Messaging
 	{
 		private static CommandService _instance;
 
-		private System.Collections.Generic.IDictionary<string, Action> commands;
+		private readonly IDictionary<string, Action> _commands;
 
 		private CommandService	()
 		{
-			commands = new Dictionary<string, Action>();
+			_commands = new Dictionary<string, Action>();
 
 		}
 
@@ -25,14 +25,14 @@ namespace CloneGame.Messaging
 
 		public static void RegisterCommand(string commandName, Action action)
 		{
-			GetInstance().commands.Add(commandName, action);
+			GetInstance()._commands.Add(commandName, action);
 		}
 
 		public static void ExecuteCommand(string commandName)
 		{
-			if (GetInstance().commands.ContainsKey(commandName))
+			if (GetInstance()._commands.ContainsKey(commandName))
 			{
-				GetInstance().commands[commandName].Invoke();
+				GetInstance()._commands[commandName].Invoke();
 			}
 		}
 	}

@@ -30,11 +30,11 @@ namespace CloneGame.Landscape
             _effect = effect;
 
 			// set up observer 
-			//var commands = from mes in MessageService.GetInstance().Messages
-			    //           where mes.MessageType == MessageType.Command
-			     //          where mes.Text == Commands.NEW_LANDSCAPE
-			      //         select mes;
-			//commands.Subscribe(m => GenerateLandscape() );
+			var commands = from mes in MessageService.GetInstance().Messages
+			               where mes.MessageType == MessageType.Command
+			               where mes.Text == Commands.NEW_LANDSCAPE
+			               select mes;
+			commands.Subscribe(m => GenerateLandscape() );
 			
 			CommandService.RegisterCommand(Commands.NEW_LANDSCAPE, () => GenerateLandscape());
 

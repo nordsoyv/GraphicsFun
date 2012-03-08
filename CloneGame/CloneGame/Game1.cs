@@ -43,8 +43,9 @@ namespace CloneGame
     	private ConsoleOutMessageObserver _consoleOutMessageObserver;
 
     	private KeyBindingHandler bindingHandler;
+    	private ExitgameEventHandler exitgameEventHandler;
 
-        public Game1()
+    	public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -89,7 +90,8 @@ namespace CloneGame
         	 bindingHandler = new KeyBindingHandler();
 
             inputHandler = new InputHandler(this.Window);
-            inputHandler.RegisterKeyboardEventReciver(new ExitgameEventHandler(this));
+        	exitgameEventHandler= new ExitgameEventHandler(this);
+          //  inputHandler.RegisterKeyboardEventReciver();
 			inputHandler.RegisterKeyboardEventReciver(commandBox);
 			inputHandler.RegisterKeyboardEventReciver(bindingHandler);
 			//inputHandler.RegisterKeyboardEventReciver(landscape);
