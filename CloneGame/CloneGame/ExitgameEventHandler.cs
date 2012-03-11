@@ -12,7 +12,7 @@ namespace CloneGame
     {
         private readonly Game1 _game;
 
-		private void QuitGame()
+		private void QuitGame(Message m)
 		{
 			_game.Exit();
 		}
@@ -20,15 +20,17 @@ namespace CloneGame
         public ExitgameEventHandler( Game1 game)
         {
             _game = game;
-
+/*
         	var commands = from mes in MessageService.GetInstance().Messages
         	               where mes.MessageType == MessageType.Command
         	               where mes.Text == Commands.QUIT
         	               select mes;
 
         	commands.Subscribe(m => QuitGame());
+			*/
+        	Action<Message> commandTarget = QuitGame;
 
-			CommandService.RegisterCommand(Commands.QUIT, QuitGame);
+			CommandService.RegisterCommand(Commands.QUIT, commandTarget);
         }
     }
 }

@@ -34,7 +34,9 @@ namespace CloneGame.Input
 					var key = ev.Key.ToString();
 					if (_keysToCommands.ContainsKey(key))
 					{
-						CommandService.ExecuteCommand(_keysToCommands[key]);
+						MessageService.Commandmessage(_keysToCommands[key]);
+
+					//CommandService.ExecuteCommand(_keysToCommands[key]);
 						ev.Handled = true;
 					}
 				}

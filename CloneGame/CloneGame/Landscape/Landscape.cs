@@ -34,13 +34,14 @@ namespace CloneGame.Landscape
 			               where mes.MessageType == MessageType.Command
 			               where mes.Text == Commands.NEW_LANDSCAPE
 			               select mes;
-			commands.Subscribe(m => GenerateLandscape() );
-			
-			CommandService.RegisterCommand(Commands.NEW_LANDSCAPE, () => GenerateLandscape());
+			commands.Subscribe(m => GenerateLandscape(m) );
+			Action<Message> commandTarget = GenerateLandscape;
+
+			CommandService.RegisterCommand(Commands.NEW_LANDSCAPE, commandTarget);
 
 		}
 
-		public void GenerateLandscape()
+		public void GenerateLandscape(Message m)
 		{
 			Random r = new Random();
 			_generator.Seed = r.Next();

@@ -84,7 +84,7 @@ namespace CloneGame
             camera = new Camera(device);
             camera.Registerplayer(player);
             landscape = new Landscape.Landscape(device,effect);
-            landscape.GenerateLandscape();
+            landscape.GenerateLandscape(null);
             commandBox = new CommandBox(device, Content);
 
         	 bindingHandler = new KeyBindingHandler();
