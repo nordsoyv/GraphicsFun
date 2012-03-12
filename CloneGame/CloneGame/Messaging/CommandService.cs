@@ -7,7 +7,7 @@ using System.Text;
 
 namespace CloneGame.Messaging
 {
-	class CommandService
+	public class CommandService
 	{
 		private static CommandService _instance;
 
@@ -22,9 +22,10 @@ namespace CloneGame.Messaging
 
 		private static void ExecuteCommand(Message command)
 		{
-			if (GetInstance()._commands.ContainsKey(command.Text))
+			var items = command.Text.Split(' ');
+			if (GetInstance()._commands.ContainsKey(items[0]))
 			{
-				GetInstance()._commands[command.Text].Invoke(command);
+				GetInstance()._commands[items[0]].Invoke(command);
 			}
 		}
 

@@ -9,42 +9,63 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Game1.cs" caret="4043" fromTop="28" />
       <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="4537" fromTop="35" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="480" fromTop="21" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutMessageObserver.cs" caret="392" fromTop="23" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:VertexFormat.cs" caret="0" fromTop="0" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Program.cs" caret="0" fromTop="0" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Landscape/f:PerlinGenerator.cs" caret="1350" fromTop="68" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Landscape/f:IGenerator.cs" caret="48" fromTop="1" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Landscape/f:GeneratingLeafNode.cs" caret="4518" fromTop="53" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Landscape/f:BasicNode.cs" caret="605" fromTop="26" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Landscape/f:RandomGenerator.cs" caret="303" fromTop="19" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Landscape/f:INode.cs" caret="47" fromTop="1" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:InputSystem.cs" caret="0" fromTop="0" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:InputHandler.cs" caret="3352" fromTop="118" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:CommandBox.cs" caret="707" fromTop="24" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:KeybuttonEvent.cs" caret="342" fromTop="12" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:KeyBoardReciver.cs" caret="0" fromTop="0" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:KeyBindingHandler.cs" caret="1054" fromTop="37" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:ExitgameEventHandler.cs" caret="847" fromTop="26" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Landscape/f:Landscape.cs" caret="1781" fromTop="51" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutLogObserver.cs" caret="406" fromTop="6" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Game1.cs" caret="3775" fromTop="30" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:Commands.cs" caret="268" fromTop="10" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:ConsoleVar.cs" caret="175" fromTop="8" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:CommandService.cs" caret="321" fromTop="6" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:MessageService.cs" caret="250" fromTop="15" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:ConsoleVarHandler.cs" caret="524" fromTop="24" />
+      <File id="0095F72F-59B9-4074-9F8D-772A581312C0/f:ConsoleVarHandlerTest.cs" caret="95" fromTop="2" />
     </RecentFiles>
     <RecentEdits>
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="3639" fromTop="23" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="4043" fromTop="39" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="3882" fromTop="23" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="2980" fromTop="9" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="3063" fromTop="14" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="3145" fromTop="19" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="3228" fromTop="24" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="3318" fromTop="29" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="3535" fromTop="42" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="5157" fromTop="37" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="4867" fromTop="26" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="708" fromTop="9" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Player.cs" caret="4694" fromTop="20" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="2119" fromTop="10" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="1378" fromTop="32" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="941" fromTop="17" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="719" fromTop="13" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="1161" fromTop="17" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="165" fromTop="9" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="1745" fromTop="34" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="2033" fromTop="45" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutMessageObserver.cs" caret="155" fromTop="6" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutMessageObserver.cs" caret="383" fromTop="21" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutMessageObserver.cs" caret="314" fromTop="16" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="90" fromTop="3" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="1035" fromTop="32" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="2122" fromTop="37" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="601" fromTop="12" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:MessageService.cs" caret="480" fromTop="3" />
-      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutMessageObserver.cs" caret="276" fromTop="11" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:CommandService.cs" caret="1195" fromTop="28" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Game1.cs" caret="3047" fromTop="24" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Landscape/f:Landscape.cs" caret="715" fromTop="19" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Landscape/f:Landscape.cs" caret="773" fromTop="15" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:CommandService.cs" caret="1192" fromTop="28" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:CommandService.cs" caret="1129" fromTop="31" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutLogObserver.cs" caret="196" fromTop="8" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutLogObserver.cs" caret="933" fromTop="48" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutLogObserver.cs" caret="628" fromTop="29" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutLogObserver.cs" caret="805" fromTop="35" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutLogObserver.cs" caret="628" fromTop="18" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutLogObserver.cs" caret="628" fromTop="8" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Input/f:ConsoleOutLogObserver.cs" caret="406" fromTop="6" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Game1.cs" caret="1243" fromTop="25" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/f:Game1.cs" caret="3775" fromTop="30" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:Commands.cs" caret="268" fromTop="10" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:ConsoleVarHandler.cs" caret="392" fromTop="16" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:ConsoleVar.cs" caret="175" fromTop="8" />
+      <File id="0095F72F-59B9-4074-9F8D-772A581312C0/f:ConsoleVarHandlerTest.cs" caret="353" fromTop="14" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:MessageService.cs" caret="337" fromTop="20" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:MessageService.cs" caret="250" fromTop="15" />
+      <File id="0095F72F-59B9-4074-9F8D-772A581312C0/f:ConsoleVarHandlerTest.cs" caret="982" fromTop="28" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:ConsoleVarHandler.cs" caret="560" fromTop="27" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:ConsoleVarHandler.cs" caret="235" fromTop="10" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:ConsoleVarHandler.cs" caret="330" fromTop="14" />
+      <File id="0095F72F-59B9-4074-9F8D-772A581312C0/f:ConsoleVarHandlerTest.cs" caret="595" fromTop="27" />
+      <File id="0095F72F-59B9-4074-9F8D-772A581312C0/f:ConsoleVarHandlerTest.cs" caret="969" fromTop="39" />
+      <File id="7B4D51BB-085E-444D-B977-451E93C02288/d:Messaging/f:ConsoleVarHandler.cs" caret="481" fromTop="23" />
+      <File id="0095F72F-59B9-4074-9F8D-772A581312C0/f:ConsoleVarHandlerTest.cs" caret="958" fromTop="41" />
+      <File id="0095F72F-59B9-4074-9F8D-772A581312C0/f:ConsoleVarHandlerTest.cs" caret="483" fromTop="22" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -63,20 +84,20 @@
       <Item value="GraphicsDevice`0" priority="3" />
       <Item value="device" priority="18" />
       <Item value="GraphicsDevice" priority="0" />
-      <Item value="public" priority="27" />
-      <Item value="void" priority="17" />
+      <Item value="public" priority="35" />
+      <Item value="void" priority="24" />
       <Item value="LeafNode`0" priority="2" />
-      <Item value="private" priority="45" />
+      <Item value="private" priority="51" />
       <Item value="int" priority="32" />
       <Item value="NewsStyleUriParser`0" priority="0" />
-      <Item value="new" priority="85" />
+      <Item value="new" priority="92" />
       <Item value="BuildVertexBuffer`0" priority="0" />
       <Item value="List" priority="14" />
       <Item value="MyOwnVertexFormat`0" priority="1" />
       <Item value="List&lt;MyOwnVertexFormat&gt;" priority="0" />
       <Item value="vertices" priority="18" />
       <Item value="for" priority="6" />
-      <Item value="if" priority="40" />
+      <Item value="if" priority="42" />
       <Item value="cubes" priority="0" />
       <Item value="x" priority="10" />
       <Item value="MyOwnVertexFormat" priority="4" />
@@ -103,7 +124,7 @@
       <Item value="Effect`0" priority="0" />
       <Item value="node" priority="6" />
       <Item value="LeafNode" priority="1" />
-      <Item value="prop" priority="9" />
+      <Item value="prop" priority="10" />
       <Item value="Vector3`0" priority="31" />
       <Item value="Camera`0" priority="1" />
       <Item value="GraphicsDeviceManager`0" priority="1" />
@@ -119,7 +140,7 @@
       <Item value="Keys`0" priority="8" />
       <Item value="PrimitiveType`0" priority="1" />
       <Item value="ClearOptions`0" priority="0" />
-      <Item value="typeof" priority="2" />
+      <Item value="typeof" priority="3" />
       <Item value="vertexBuffer" priority="2" />
       <Item value="VertexBuffer" priority="0" />
       <Item value="Length" priority="2" />
@@ -146,16 +167,16 @@
       <Item value="zPos" priority="0" />
       <Item value="sideSize" priority="1" />
       <Item value="size" priority="0" />
-      <Item value="const" priority="5" />
+      <Item value="const" priority="8" />
       <Item value="nodes" priority="0" />
       <Item value="List&lt;LeafNode&gt;" priority="0" />
-      <Item value="foreach" priority="10" />
+      <Item value="foreach" priority="11" />
       <Item value="leafNode" priority="0" />
       <Item value="CreateNodes`0" priority="0" />
       <Item value="RandomGenerator`0" priority="3" />
       <Item value="rand" priority="1" />
       <Item value="double" priority="3" />
-      <Item value="return" priority="8" />
+      <Item value="return" priority="10" />
       <Item value="_generator" priority="4" />
       <Item value="RandomGenerator" priority="0" />
       <Item value="generator" priority="2" />
@@ -173,17 +194,17 @@
       <Item value="seed" priority="1" />
       <Item value="Standard" priority="1" />
       <Item value="System" priority="2" />
-      <Item value="Console`0" priority="8" />
+      <Item value="Console`0" priority="9" />
       <Item value="Sample`0" priority="1" />
-      <Item value="var" priority="14" />
+      <Item value="var" priority="16" />
       <Item value="LibNoise" priority="1" />
       <Item value="Perlin`0" priority="2" />
       <Item value="location" priority="2" />
-      <Item value="Landscape`0" priority="3" />
+      <Item value="Landscape`0" priority="4" />
       <Item value="_device" priority="1" />
       <Item value="GeneratingLeafNode`0" priority="1" />
       <Item value="landscape" priority="3" />
-      <Item value="Landscape" priority="0" />
+      <Item value="Landscape" priority="1" />
       <Item value="cubeSize" priority="0" />
       <Item value="value" priority="2" />
       <Item value="BasicNode`0" priority="0" />
@@ -259,7 +280,7 @@
       <Item value="IObserver" priority="4" />
       <Item value="enum" priority="2" />
       <Item value="MouseEventType`0" priority="0" />
-      <Item value="ctor" priority="0" />
+      <Item value="ctor" priority="1" />
       <Item value="MouseEvent`0" priority="3" />
       <Item value="IMouseEventReciver`0" priority="3" />
       <Item value="mouseRecivers" priority="1" />
@@ -271,7 +292,7 @@
       <Item value="MouseEvent" priority="0" />
       <Item value="mEvent" priority="2" />
       <Item value="reciver" priority="0" />
-      <Item value="events" priority="9" />
+      <Item value="events" priority="10" />
       <Item value="Movement" priority="0" />
       <Item value="movement" priority="1" />
       <Item value="HandleMouseInput`0" priority="0" />
@@ -287,18 +308,18 @@
       <Item value="Alt" priority="1" />
       <Item value="else" priority="5" />
       <Item value="hasInput" priority="4" />
-      <Item value="string" priority="4" />
-      <Item value="command" priority="9" />
+      <Item value="string" priority="15" />
+      <Item value="command" priority="10" />
       <Item value="posX" priority="0" />
       <Item value="posY" priority="0" />
       <Item value="marginX" priority="2" />
       <Item value="marginY" priority="0" />
-      <Item value="keyboardEvent" priority="10" />
+      <Item value="keyboardEvent" priority="12" />
       <Item value="Enum`0" priority="0" />
       <Item value="Handled" priority="0" />
       <Item value="false" priority="3" />
       <Item value="enterEvent" priority="0" />
-      <Item value="true" priority="6" />
+      <Item value="true" priority="7" />
       <Item value="WaveInCapture" priority="0" />
       <Item value="esc" priority="0" />
       <Item value="letter" priority="2" />
@@ -374,45 +395,93 @@
       <Item value="KeybuttonEvent" priority="0" />
       <Item value="keybuttonEvent" priority="1" />
       <Item value="keyboardEventReciver" priority="0" />
-      <Item value="IEnumerable" priority="4" />
+      <Item value="IEnumerable" priority="5" />
       <Item value="IKeyboardEventReciver`0" priority="0" />
       <Item value="allEvents" priority="1" />
       <Item value="char" priority="0" />
       <Item value="ArgumentOutOfRangeException`0" priority="0" />
       <Item value="game" priority="0" />
-      <Item value="GenerateLandscape`0" priority="0" />
+      <Item value="GenerateLandscape`0" priority="4" />
       <Item value="activeEvents" priority="0" />
       <Item value="sumAcceleration" priority="15" />
       <Item value="acceleration" priority="2" />
       <Item value="velocity" priority="15" />
-      <Item value="IDictionary" priority="0" />
+      <Item value="IDictionary" priority="2" />
       <Item value="Move`0" priority="0" />
       <Item value="MaxSpeed" priority="2" />
       <Item value="delta" priority="0" />
       <Item value="IObservable" priority="2" />
-      <Item value="MessageService`0" priority="8" />
-      <Item value="static" priority="0" />
+      <Item value="MessageService`0" priority="12" />
+      <Item value="static" priority="4" />
       <Item value="instance" priority="2" />
       <Item value="MessageService" priority="0" />
       <Item value="observers" priority="0" />
-      <Item value="Message`0" priority="6" />
+      <Item value="Message`0" priority="12" />
       <Item value="observer" priority="0" />
       <Item value="MessageType`0" priority="0" />
       <Item value="DateTime`0" priority="1" />
-      <Item value="m" priority="6" />
+      <Item value="m" priority="7" />
       <Item value="Log" priority="0" />
       <Item value="text" priority="0" />
       <Item value="SendMessage`0" priority="0" />
       <Item value="ConsoleOutMessageObserver`0" priority="0" />
       <Item value="from" priority="2" />
       <Item value="in" priority="1" />
-      <Item value="select" priority="0" />
-      <Item value="where" priority="2" />
+      <Item value="select" priority="1" />
+      <Item value="where" priority="4" />
       <Item value="ms" priority="1" />
-      <Item value="a" priority="0" />
+      <Item value="a" priority="1" />
       <Item value="WriteMessage`0" priority="0" />
       <Item value="using" priority="0" />
       <Item value="AppDomainSetup`0" priority="1" />
+      <Item value="CloneGame" priority="0" />
+      <Item value="Commands`0" priority="6" />
+      <Item value="CommandService`0" priority="7" />
+      <Item value="commands" priority="2" />
+      <Item value="HashSet" priority="0" />
+      <Item value="Action" priority="4" />
+      <Item value="Dictionary&lt;string,Action&gt;" priority="0" />
+      <Item value="_instance" priority="2" />
+      <Item value="newLandscape" priority="0" />
+      <Item value="InsufficientExecutionStackException`0" priority="0" />
+      <Item value="commandName" priority="2" />
+      <Item value="inputHandler" priority="0" />
+      <Item value="KeyBindingHandler`0" priority="2" />
+      <Item value="bindingHandler" priority="0" />
+      <Item value="keysToCommands" priority="4" />
+      <Item value="Dictionary&lt;string,string&gt;" priority="0" />
+      <Item value="CommandBox`0" priority="1" />
+      <Item value="ev" priority="1" />
+      <Item value="key" priority="0" />
+      <Item value="Messaging" priority="0" />
+      <Item value="mes" priority="2" />
+      <Item value="Command" priority="1" />
+      <Item value="QuitGame`0" priority="2" />
+      <Item value="AddKeyBinding`0" priority="0" />
+      <Item value="ExitgameEventHandler`0" priority="0" />
+      <Item value="commandStream" priority="0" />
+      <Item value="ExecuteCommand`0" priority="0" />
+      <Item value="_keysToCommands" priority="0" />
+      <Item value="commandTarget" priority="0" />
+      <Item value="Action&lt;Message&gt;" priority="0" />
+      <Item value="throw" priority="0" />
+      <Item value="ArgumentException`0" priority="0" />
+      <Item value="ConsoleOutCommandObserver`0" priority="0" />
+      <Item value="_consoleOutCommandObserver" priority="0" />
+      <Item value="ConsoleOutCommandObserver" priority="0" />
+      <Item value="ConsoleVarHandler`0" priority="3" />
+      <Item value="ConsoleVarHandler" priority="0" />
+      <Item value="ConsoleVarHandlerTest`0" priority="0" />
+      <Item value="handler" priority="2" />
+      <Item value="Assert`0" priority="2" />
+      <Item value="TestCategoryAttribute`0" priority="0" />
+      <Item value="cvar" priority="0" />
+      <Item value="ConsoleVar`0" priority="3" />
+      <Item value="GetInstance`0" priority="0" />
+      <Item value="_cvars" priority="0" />
+      <Item value="List&lt;ConsoleVar&gt;" priority="0" />
+      <Item value="vars" priority="0" />
+      <Item value="v" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
       <Item value="ToArray`0" priority="2" />
@@ -648,7 +717,7 @@
       <Item value="Count`1" priority="1" />
       <Item value="First`1" priority="4" />
       <Item value="Where`1" priority="2" />
-      <Item value="FirstOrDefault`1" priority="0" />
+      <Item value="FirstOrDefault`1" priority="1" />
       <Item value="ToList`1" priority="0" />
       <Item value="OfType`1" priority="1" />
       <Item value="Any`1" priority="0" />
@@ -661,19 +730,19 @@
       <Item value="Alt" priority="1" />
       <Item value="Ctrl" priority="0" />
       <Item value="Time" priority="0" />
-      <Item value="GetType`0" priority="1" />
+      <Item value="GetType`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Microsoft.Xna.Framework.Input.Keys">
       <Item value="GetTypeCode`0" priority="0" />
       <Item value="HasFlag`0" priority="0" />
-      <Item value="ToString`0" priority="2" />
+      <Item value="ToString`0" priority="3" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.String">
       <Item value="CompareTo`0" priority="0" />
-      <Item value="ToLower`0" priority="0" />
+      <Item value="ToLower`0" priority="1" />
       <Item value="ToUpper`0" priority="0" />
       <Item value="Length" priority="3" />
-      <Item value="Substring`0" priority="1" />
+      <Item value="Substring`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@CloneGame.Input.KeyboardEvent+KeyboardEventType">
       <Item value="Pressed" priority="0" />
@@ -722,8 +791,8 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:CloneGame.Input.KeybuttonEvent">
       <Item value="Time" priority="0" />
-      <Item value="Handled" priority="3" />
-      <Item value="Key" priority="0" />
+      <Item value="Handled" priority="4" />
+      <Item value="Key" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:CloneGame.Input.IKeyboardEventReciver">
       <Item value="HandleEvent`0" priority="0" />
@@ -745,6 +814,60 @@
     <ItemStatistics item="Qualified:CloneGame.MessageService">
       <Item value="Subscribe`0" priority="1" />
       <Item value="Messages" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CloneGame.Messaging.Commands">
+      <Item value="NEW_LANDSCAPE" priority="3" />
+      <Item value="QUIT" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Messaging.CommandService">
+      <Item value="RegisterCommand`0" priority="0" />
+      <Item value="commands" priority="2" />
+      <Item value="_commands" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IDictionary`2">
+      <Item value="Add`0" priority="1" />
+      <Item value="ContainsKey`0" priority="2" />
+      <Item value="Indexer" priority="0" />
+      <Item value="ToList`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Action">
+      <Item value="Invoke`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CloneGame.Messaging.CommandService">
+      <Item value="ExecuteCommand`0" priority="1" />
+      <Item value="RegisterCommand`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Input.InputHandler">
+      <Item value="RegisterKeyboardEventReciver`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CloneGame.Messaging.MessageService">
+      <Item value="GetInstance`0" priority="1" />
+      <Item value="Commandmessage`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Messaging.MessageService">
+      <Item value="Messages" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Messaging.Message">
+      <Item value="MessageType" priority="1" />
+      <Item value="Text" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IObservable`1">
+      <Item value="Subscribe`0" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@CloneGame.Messaging.ConsoleVarHandler">
+      <Item value="GetInstance`0" priority="0" />
+      <Item value="SetVar`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@Microsoft.VisualStudio.TestTools.UnitTesting.Assert">
+      <Item value="IsNotNull`0" priority="1" />
+      <Item value="Equals`0" priority="0" />
+      <Item value="AreEqual`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Messaging.ConsoleVar">
+      <Item value="Name" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:CloneGame.Messaging.ConsoleVarHandler">
+      <Item value="_cvars" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using CloneGame.Input;
 using CloneGame.Landscape;
+using CloneGame.Messaging;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -40,10 +41,12 @@ namespace CloneGame
 
         private InputHandler inputHandler;
 
-    	private ConsoleOutMessageObserver _consoleOutMessageObserver;
+    	private ConsoleOutLogObserver _consoleOutLogObserver;
+		private ConsoleOutCommandObserver _consoleOutCommandObserver;
 
     	private KeyBindingHandler bindingHandler;
     	private ExitgameEventHandler exitgameEventHandler;
+    	private ConsoleVarHandler consoleVarHandler;
 
     	public Game1()
         {
@@ -89,6 +92,7 @@ namespace CloneGame
 
         	 bindingHandler = new KeyBindingHandler();
 
+        	 ConsoleVarHandler.GetInstance();
             inputHandler = new InputHandler(this.Window);
         	exitgameEventHandler= new ExitgameEventHandler(this);
           //  inputHandler.RegisterKeyboardEventReciver();
@@ -98,7 +102,8 @@ namespace CloneGame
 			inputHandler.RegisterKeyboardEventReciver(player);
 			inputHandler.RegisterMouseEventReciver(player);
 
-        	_consoleOutMessageObserver = new ConsoleOutMessageObserver();
+        	_consoleOutLogObserver = new ConsoleOutLogObserver();
+        	_consoleOutCommandObserver = new ConsoleOutCommandObserver();
         }
 
         /// <summary>

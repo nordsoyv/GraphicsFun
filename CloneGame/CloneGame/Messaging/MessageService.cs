@@ -4,14 +4,14 @@ using System.Linq;
 
 namespace CloneGame.Messaging
 {
-	internal enum MessageType
+	public enum MessageType
 	{
 		Log,
 		Debug,
 		Command
 	}
 
-	class Message
+	public class  Message
 	{
 		public string Text { get; set; }
 		public MessageType MessageType { get; set; }
@@ -19,7 +19,7 @@ namespace CloneGame.Messaging
 
 	}
 
-	class MessageService
+	public class MessageService
 	{
 		static private MessageService instance;
 		private Channel channel;
@@ -68,7 +68,7 @@ namespace CloneGame.Messaging
 				m.MessageType = MessageType.Command;
 				m.Text = text;
 				m.Time = DateTime.Now;
-				instance.channel.SendMessage(m);
+				GetInstance().channel.SendMessage(m);
 			}
 			else
 			{

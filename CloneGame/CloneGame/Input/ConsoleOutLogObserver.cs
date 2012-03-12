@@ -7,16 +7,13 @@ using CloneGame.Messaging;
 
 namespace CloneGame.Input
 {
-	class ConsoleOutMessageObserver 
+	class ConsoleOutLogObserver
 	{
-		public ConsoleOutMessageObserver()
+		public ConsoleOutLogObserver()
 		{
 			var logMessages = MessageService.GetInstance().Messages.Where(mes => mes.MessageType == MessageType.Log);
 
 			logMessages.Subscribe(WriteLogMessage);
-
-			var commandMessages = MessageService.GetInstance().Messages.Where(mes => mes.MessageType == MessageType.Command);
-			commandMessages.Subscribe(WriteCommandMessages);
 		}
 
 
@@ -24,6 +21,21 @@ namespace CloneGame.Input
 		{
 			Console.Out.WriteLine("LOG: " + value.Text);
 		}
+
+
+
+	}
+
+	class ConsoleOutCommandObserver
+	{
+		public ConsoleOutCommandObserver()
+		{
+
+			var commandMessages = MessageService.GetInstance().Messages.Where(mes => mes.MessageType == MessageType.Command);
+			commandMessages.Subscribe(WriteCommandMessages);
+		}
+
+
 
 		private static void WriteCommandMessages(Message value)
 		{

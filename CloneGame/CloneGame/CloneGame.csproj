@@ -122,7 +122,7 @@
     <Compile Include="Landscape\IGenerator.cs" />
     <Compile Include="Landscape\GeneratingLeafNode.cs" />
     <Compile Include="Landscape\INode.cs" />
-    <Compile Include="Input\ConsoleOutMessageObserver.cs" />
+    <Compile Include="Input\ConsoleOutLogObserver.cs" />
     <Compile Include="Input\InputHandler.cs" />
     <Compile Include="Input\InputSystem.cs" />
     <Compile Include="Input\KeybuttonEvent.cs" />
@@ -132,6 +132,8 @@
     <Compile Include="Landscape\PerlinGenerator.cs" />
     <Compile Include="Messaging\Commands.cs" />
     <Compile Include="Messaging\CommandService.cs" />
+    <Compile Include="Messaging\ConsoleVar.cs" />
+    <Compile Include="Messaging\ConsoleVarHandler.cs" />
     <Compile Include="Messaging\MessageService.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -146,8 +148,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CloneGameContent\CloneGameContent.contentproj">
-      <Name>CloneGameContent</Name>
+      <Name>CloneGameContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>
+      <Project>{2AC9123D-B104-48D7-9E51-B5A58BE2F2EB}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

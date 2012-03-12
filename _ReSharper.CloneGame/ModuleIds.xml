@@ -1,3 +1,4 @@
 <Modules>
   <Module PersistentId="7B4D51BB-085E-444D-B977-451E93C02288" ModuleId="CloneGame" />
+  <Module PersistentId="0095F72F-59B9-4074-9F8D-772A581312C0" ModuleId="CloneGameTest" />
 </Modules>
