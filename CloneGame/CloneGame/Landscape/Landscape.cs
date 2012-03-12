@@ -29,15 +29,7 @@ namespace CloneGame.Landscape
 			_generator = new PerlinGenerator();
             _effect = effect;
 
-			// set up observer 
-			var commands = from mes in MessageService.GetInstance().Messages
-			               where mes.MessageType == MessageType.Command
-			               where mes.Text == Commands.NEW_LANDSCAPE
-			               select mes;
-			commands.Subscribe(m => GenerateLandscape(m) );
-			Action<Message> commandTarget = GenerateLandscape;
-
-			CommandService.RegisterCommand(Commands.NEW_LANDSCAPE, commandTarget);
+			CommandService.RegisterCommand(Commands.NEW_LANDSCAPE, GenerateLandscape);
 
 		}
 
