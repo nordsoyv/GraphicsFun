@@ -35,16 +35,10 @@ namespace CloneGame.Messaging
 
 		public static void RegisterCommand(string commandName, Action<Message> action)
 		{
+			if (GetInstance()._commands.ContainsKey(commandName))
+				throw new ArgumentException("Command already registered");
 			GetInstance()._commands.Add(commandName, action);
 		}
-		/*
-		private static void ExecuteCommand(string commandName)
-		{
-			if (GetInstance()._commands.ContainsKey(commandName))
-			{
-				GetInstance()._commands[commandName].Invoke();
-			}
-		}
-		 * */
+		
 	}
 }
