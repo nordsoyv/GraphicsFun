@@ -37,6 +37,7 @@ namespace CloneGame.Landscape
 		{
 			Random r = new Random();
 			_generator.Seed = r.Next();
+			ConsoleVarHandler.SetVar(ConsoleVar.LANDSCAPE_SEED, _generator.Seed.ToString());
 			_nodes = new List<LandscapeNode>();
 			CreateNodes();
 		}

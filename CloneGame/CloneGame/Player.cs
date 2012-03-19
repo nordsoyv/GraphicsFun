@@ -201,7 +201,7 @@ namespace CloneGame
 				sumAcceleration *= -acceleration * 10 ; // slow down a bit faster than normal accel
   
 			}
-			velocity += sumAcceleration * delta;
+			velocity += sumAcceleration * delta ;
 			if(velocity.Length() >= MaxSpeed || velocity.Length() <= -MaxSpeed)
 			{
 				velocity.Normalize();

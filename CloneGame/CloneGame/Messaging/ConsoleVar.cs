@@ -9,8 +9,12 @@ namespace CloneGame.Messaging
 	{
 		public string Name { get; set; }
 
-		public string Value
-		{
-			get; set; }
+		public string Value {get; set; }
+
+		public const string FOV = "g_fov";
+		public const string LANDSCAPE_SEED = "l_seed";
+
 	}
+
+
 }
