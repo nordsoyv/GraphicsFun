@@ -25,17 +25,19 @@ namespace CloneGame
 			Vector3 camup = new Vector3(0, 1, 0);
 			camup = Vector3.Transform(camup, Matrix.CreateFromQuaternion(Heading));
 			Vector3 camLookat = new Vector3(0, 0, 1);
-			//Quaternion dir = new Quaternion(camLookat, 0);
 
 			camLookat = Vector3.Transform(camLookat, Matrix.CreateFromQuaternion( Heading));
 			return Matrix.CreateLookAt(Position, camLookat + Position, camup);
-			//Matrix.CreateLookAt()
-			//return Matrix.CreateLookAt(Position, Lookat, new Vector3(0, 1, 0));
 		}
 
 		public Matrix GetProjectionMatrix()
 		{
-			return Matrix.CreatePerspectiveFieldOfView(MathHelper.PiOver4, device.Viewport.AspectRatio, 1.0f, 1000.0f);
+            //var fov = MathHelper.PiOver4;
+            var fov_cvar = Messaging.ConsoleVarHandler.GetVar(Messaging.ConsoleVar.FOV);
+            float fov;
+            float.TryParse(fov_cvar.Value, out fov);
+            
+			return Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(fov), device.Viewport.AspectRatio, 1.0f, 1000.0f);
 		}
 
 		public void Registerplayer(Player p)

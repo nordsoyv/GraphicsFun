@@ -90,9 +90,10 @@ namespace CloneGame
             landscape.GenerateLandscape(null);
             commandBox = new CommandBox(device, Content);
 
-        	 bindingHandler = new KeyBindingHandler();
+        	bindingHandler = new KeyBindingHandler();
 
-        	 ConsoleVarHandler.GetInstance();
+        	ConsoleVarHandler.GetInstance();
+            SetDefaultConsoleVars();
             inputHandler = new InputHandler(this.Window);
         	exitgameEventHandler= new ExitgameEventHandler(this);
           //  inputHandler.RegisterKeyboardEventReciver();
@@ -104,6 +105,11 @@ namespace CloneGame
 
         	_consoleOutLogObserver = new ConsoleOutLogObserver();
         	_consoleOutCommandObserver = new ConsoleOutCommandObserver();
+        }
+
+        private void SetDefaultConsoleVars()
+        {
+            ConsoleVarHandler.SetVar(ConsoleVar.FOV, "90");
         }
 
         /// <summary>
